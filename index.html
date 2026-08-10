@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Systeme | Expert en Sécurité Électronique & Technologies Intelligentes au Maroc</title>
+    <meta name="description" content="Excellence Systeme - Leader au Maroc dans la conception, l'intégration et l'installation de solutions de vidéosurveillance, contrôle d'accès, détection incendie et domotique.">
+    <meta name="keywords" content="sécurité électronique Maroc, vidéosurveillance Casablanca, contrôle d'accès, détection incendie, domotique Rabat, réseaux informatiques">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-3d.png">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Company Logo -->
+                <a href="#hero" class="nav-logo">
+                    <img src="assets/logo-3d.png" alt="Excellence Systeme Logo" id="main-logo">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link active" data-i18n="navHome">Accueil</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="navAbout">À propos</a></li>
+                    <li><a href="#solutions" class="nav-link" data-i18n="navSolutions">Solutions</a></li>
+                    <li><a href="#products" class="nav-link" data-i18n="navProducts">Produits</a></li>
+                    <li><a href="#why-us" class="nav-link" data-i18n="navServices">Services</a></li>
+                    <li><a href="#realizations" class="nav-link" data-i18n="navRealizations">Réalisations</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+                </ul>
+
+                <!-- Header Right Actions -->
+                <div class="nav-actions">
+                    <!-- Language Selector -->
+                    <div class="lang-selector">
+                        <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+                        <button type="button" class="lang-btn" data-lang="en">EN</button>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <button type="button" class="btn btn-primary btn-sm" data-open-quote data-i18n="btnQuote">
+                        Demander un devis
+                    </button>
+
+                    <!-- Mobile Hamburger Menu Button -->
+                    <button type="button" class="mobile-toggle" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas"></canvas>
+
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span data-i18n="heroTag">EXPERT SÉCURITÉ ÉLECTRONIQUE</span>
+                    </div>
+
+                    <h1 class="hero-title" data-i18n="heroTitle">
+                        Des solutions intelligentes pour une sécurité <span class="highlight">sans compromis</span>
+                    </h1>
+
+                    <p class="hero-description" data-i18n="heroDesc">
+                        Nous concevons, intégrons et installons des solutions de sécurité électronique et de technologie intelligente adaptées aux entreprises, institutions et particuliers.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#solutions" class="btn btn-primary" data-i18n="btnDiscover">
+                            Découvrir nos solutions <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-open-quote data-i18n="btnQuote">
+                            Demander un devis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right 3D Visual -->
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero-3d.png" alt="Integrated Security Ecosystem 3D Visual">
+                        
+                        <!-- Floating Live Status Badges -->
+                        <div class="status-badge top-right">
+                            <div class="status-indicator"></div>
+                            <span class="status-text">Système Sécurisé 24/7</span>
+                        </div>
+
+                        <div class="status-badge bottom-left">
+                            <i class="fa-solid fa-network-wired" style="color: #63C4C4;"></i>
+                            <span class="status-text">Caméras AI Actives</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar (Key Statistics) -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="300" data-prefix="+">+300</div>
+                    <div class="stat-label" data-i18n="stat1Label">Solutions déployées</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100" data-prefix="+">+100</div>
+                    <div class="stat-label" data-i18n="stat2Label">Clients accompagnés</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10" data-prefix="+">+10</div>
+                    <div class="stat-label" data-i18n="stat3Label">Années d’expertise</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24" data-suffix="/7">24/7</div>
+                    <div class="stat-label" data-i18n="stat4Label">Support technique</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-layer-group"></i> <span>NOS EXPERTISES</span>
+                </div>
+                <h2 class="section-title" data-i18n="solutionsTitle">Nos solutions</h2>
+                <p class="section-subtitle" data-i18n="solutionsSub">
+                    Une technologie pensée pour protéger, connecter et simplifier.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- Solution 1 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="solution-title">Vidéosurveillance</h3>
+                    <p class="solution-desc">Surveillance intelligente et contrôle à distance haute définition avec analyse vidéo IA.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Vidéosurveillance">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <h3 class="solution-title">Contrôle d'accès</h3>
+                    <p class="solution-desc">Gestion sécurisée des accès aux espaces sensibles par biométrie, badge et reconnaissance faciale.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Contrôle d'accès">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h3 class="solution-title">Détection incendie</h3>
+                    <p class="solution-desc">Détection rapide, alarme précoce et systèmes automatisés de sécurité incendie certifiés.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Détection incendie">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="solution-title">Réseaux & Infrastructure</h3>
+                    <p class="solution-desc">Infrastructure réseau performante, câblage structuré, fibre optique et baies serveur sécurisées.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Réseaux & Infrastructure">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 5 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-house-signal"></i>
+                    </div>
+                    <h3 class="solution-title">Domotique & Smart Home</h3>
+                    <p class="solution-desc">Des environnements intelligents, connectés et automatisés pour un confort et une gestion optimale.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Domotique & Smart Home">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 6 -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <h3 class="solution-title">Sonorisation professionnelle</h3>
+                    <p class="solution-desc">Solutions audio professionnelles, interphonie et diffusion sonore adaptées à chaque environnement.</p>
+                    <a href="#contact" class="solution-link" data-open-quote data-subject="Sonorisation professionnelle">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-microchip"></i> <span>ÉQUIPEMENTS POINTE</span>
+                </div>
+                <h2 class="section-title">Nos produits</h2>
+                <p class="section-subtitle">
+                    Sélection d'équipements de haute qualité certifiés par les grands leaders mondiaux.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs">
+                <button type="button" class="tab-btn active" data-category="all">Tous les produits</button>
+                <button type="button" class="tab-btn" data-category="cctv">Vidéosurveillance</button>
+                <button type="button" class="tab-btn" data-category="access">Contrôle d'accès</button>
+                <button type="button" class="tab-btn" data-category="fire">Détection incendie</button>
+                <button type="button" class="tab-btn" data-category="network">Réseaux</button>
+                <button type="button" class="tab-btn" data-category="signage">Affichage dynamique</button>
+                <button type="button" class="tab-btn" data-category="audio">Sonorisation</button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="cctv">
+                    <div class="product-image">
+                        <img src="assets/prod-cctv.png" alt="Caméra AI Dome PTZ 4K">
+                        <span class="product-tag">Vidéosurveillance</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Caméra AI PTZ Dome 4K</h4>
+                        <p class="product-desc">Caméra motorisée d'extérieur avec vision nocturne starlight, zoom optique 30x et suivi intelligent d'objets.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Caméra AI PTZ Dome 4K">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="access">
+                    <div class="product-image">
+                        <img src="assets/prod-access.png" alt="Terminal Biométrique Biopass">
+                        <span class="product-tag">Contrôle d'accès</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Terminal Biométrique Touch Pro</h4>
+                        <p class="product-desc">Lecteur biométrique multi-technologies : empreinte digitale, carte RFID sans contact et écran tactile HD.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Terminal Biométrique Touch Pro">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="fire">
+                    <div class="product-image">
+                        <img src="assets/prod-fire.png" alt="Détecteur Incendie Optique">
+                        <span class="product-tag">Détection incendie</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Détecteur Incendie Adressable</h4>
+                        <p class="product-desc">Capteur optique de fumée intelligent avec microprocesseur de filtrage des fausses alarmes et anneau LED.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Détecteur Incendie Adressable">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="network">
+                    <div class="product-image">
+                        <img src="assets/prod-network.png" alt="Switch Réseau PoE Enterprise">
+                        <span class="product-tag">Réseaux</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Switch Enterprise 24P PoE+</h4>
+                        <p class="product-desc">Switch rackable 24 ports Gigabit PoE+ avec 4 uplinks SFP+ 10Gbps pour architectures de sécurité critiques.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Switch Enterprise 24P PoE+">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="signage">
+                    <div class="product-image">
+                        <img src="assets/prod-signage.png" alt="Écran Affichage Dynamique">
+                        <span class="product-tag">Affichage dynamique</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Écran Professionnel 4K Ultra Slim</h4>
+                        <p class="product-desc">Moniteur professionnel 55" haute luminosité 24/7 pour accueil d'entreprise et mur d'images de contrôle.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Écran Professionnel 4K Ultra Slim">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="audio">
+                    <div class="product-image">
+                        <img src="assets/prod-audio.png" alt="Amplificateur Audio Pro">
+                        <span class="product-tag">Sonorisation</span>
+                    </div>
+                    <div class="product-body">
+                        <h4 class="product-name">Amplificateur Multi-Zone Pro</h4>
+                        <p class="product-desc">Système d'amplification multizone commercial avec gestion d'annonces de sécurité et haut-parleurs encastrés.</p>
+                        <div class="product-footer">
+                            <span style="font-weight:700; color:#63C4C4; font-size:0.85rem;"><i class="fa-solid fa-check"></i> En Stock</span>
+                            <button type="button" class="btn btn-primary btn-sm" data-open-quote data-subject="Amplificateur Multi-Zone Pro">Demander un devis</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products View All CTA -->
+            <div class="text-center" style="margin-top: 48px;">
+                <button type="button" class="btn btn-outline" data-open-quote data-subject="Catalogue Général Produits">
+                    Voir tous les produits <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left Image Column -->
+                <div class="about-image-column">
+                    <div class="about-image-wrapper">
+                        <img src="assets/about-team.png" alt="Équipe technique Excellence Systeme en salle de contrôle">
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-num">+10</div>
+                        <div class="experience-text">Années d'Excellence<br>au Maroc</div>
+                    </div>
+                </div>
+
+                <!-- Right Text Content Column -->
+                <div class="about-content">
+                    <div class="section-tag">
+                        <i class="fa-solid fa-building-user"></i> <span>À PROPOS DE NOUS</span>
+                    </div>
+
+                    <h2 class="section-title" data-i18n="aboutTitle">
+                        Votre partenaire technologique de confiance
+                    </h2>
+
+                    <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:20px;">
+                        Excellence Systeme est une société marocaine majeure spécialisée dans le conseil, la fourniture, l'intégration et la maintenance d'équipements de sécurité électronique et de solutions intelligentes.
+                    </p>
+
+                    <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:28px;">
+                        Forts de plus de 10 ans d'expérience auprès des entreprises grands comptes, des chaînes hôtelières et des résidences de standing à travers le Royaume, nous nous engageons à offrir une protection maximale à vos infrastructures grâce à des technologies de pointe.
+                    </p>
+
+                    <!-- Benefits Checklist -->
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Expertise technique éprouvée</h4>
+                                <p>Des ingénieurs et techniciens certifiés maîtrisant les normes internationales de sécurité.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Solutions sur mesure & évolutives</h4>
+                                <p>Une étude approfondie de vos besoins pour concevoir une architecture personnalisée.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Installation & support professionnel 24/7</h4>
+                                <p>Un accompagnement continu avec un contrat de maintenance réactif et des interventions d'urgence.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" data-open-quote>
+                        Prendre rendez-vous avec un expert
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag" style="background: rgba(99,196,196,0.15); border-color: rgba(99,196,196,0.3); color:#63C4C4;">
+                    <i class="fa-solid fa-award"></i> <span>NOS ENGAGEMENTS</span>
+                </div>
+                <h2 class="section-title" data-i18n="whyTitle">Pourquoi nous choisir ?</h2>
+                <p class="section-subtitle">
+                    Quatre piliers fondamentaux qui font la renommée d'Excellence Systeme au Maroc.
+                </p>
+            </div>
+
+            <div class="why-grid">
+                <!-- Feature 01 -->
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3 class="why-title">Expertise</h3>
+                    <p class="why-desc">Une équipe spécialisée et régulièrement formée aux nouvelles technologies de sécurité et réseaux.</p>
+                </div>
+
+                <!-- Feature 02 -->
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3 class="why-title">Innovation</h3>
+                    <p class="why-desc">Des solutions intelligentes intégrant l'IA, la biométrie et le cloud adaptées aux nouveaux défis.</p>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3 class="why-title">Fiabilité</h3>
+                    <p class="why-desc">Des équipements professionnels certifiés garantissant des installations durables et pérennes.</p>
+                </div>
+
+                <!-- Feature 04 -->
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3 class="why-title">Accompagnement</h3>
+                    <p class="why-desc">Un suivi personnalisé de l'audit initial jusqu'à la mise en service et au contrat de maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-diagram-project"></i> <span>MÉTHODOLOGIE</span>
+                </div>
+                <h2 class="section-title" data-i18n="processTitle">Notre processus d'intervention</h2>
+                <p class="section-subtitle">
+                    Une approche structurée pour garantir la réussite de chaque déploiement.
+                </p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-node">01</div>
+                    <h4 class="step-title">Analyse du besoin</h4>
+                    <p class="step-desc">Audit technique sur site et identification précise de vos vulnérabilités et objectifs.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-node">02</div>
+                    <h4 class="step-title">Étude & conception</h4>
+                    <p class="step-desc">Élaboration du cahier des charges, choix du matériel et schémas d'architecture réseau.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-node">03</div>
+                    <h4 class="step-title">Installation</h4>
+                    <p class="step-desc">Pose, câblage, paramétrage et tests de conformité par nos techniciens qualifiés.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-node">04</div>
+                    <h4 class="step-title">Maintenance & support</h4>
+                    <p class="step-desc">Formation des utilisateurs, assistance 24/7 et interventions préventives et curatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realizations (Portfolio) Section -->
+    <section class="realizations" id="realizations">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-briefcase"></i> <span>PORTFOLIO PROJETS</span>
+                </div>
+                <h2 class="section-title" data-i18n="realizationsTitle">Nos réalisations</h2>
+                <p class="section-subtitle">
+                    Découvrez quelques-uns de nos projets récents déployés à travers le Maroc.
+                </p>
+            </div>
+
+            <!-- Portfolio Category Tabs -->
+            <div class="category-tabs">
+                <button type="button" class="tab-btn active" data-category="all">Tous les projets</button>
+                <button type="button" class="tab-btn" data-category="corporate">Entreprises</button>
+                <button type="button" class="tab-btn" data-category="hotel">Hôtels</button>
+                <button type="button" class="tab-btn" data-category="residence">Résidences</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card" data-category="corporate">
+                    <img src="assets/real-corporate.png" alt="Projet Tour Financière Casablanca">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Entreprises & Banques</span>
+                        <h3 class="portfolio-title">Tour Financière CFC</h3>
+                        <div class="portfolio-location">
+                            <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Casablanca, Maroc
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card" data-category="hotel">
+                    <img src="assets/real-hotel.png" alt="Projet Resort Hôtelier Marrakech">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Hôtellerie 5 Étoiles</span>
+                        <h3 class="portfolio-title">Resort & Spa Hôtelier</h3>
+                        <div class="portfolio-location">
+                            <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Marrakech, Maroc
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card" data-category="residence">
+                    <img src="assets/real-residence.png" alt="Projet Villa Intelligente Rabat">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Domotique & Smart Home</span>
+                        <h3 class="portfolio-title">Villa de Standing Intelligente</h3>
+                        <div class="portfolio-location">
+                            <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Rabat, Maroc
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-comments"></i> <span>TÉMOIGNAGES</span>
+                </div>
+                <h2 class="section-title" data-i18n="testimonialsTitle">Ils nous font confiance</h2>
+                <p class="section-subtitle">
+                    La satisfaction de nos clients est notre plus grande fierté.
+                </p>
+            </div>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="quote-text">
+                            "Excellence Systeme a équipé notre siège social à Casablanca d'un système complet de vidéosurveillance 4K et de contrôle d'accès biométrique. La qualité d'installation et la réactivité du support technique sont exemplaires."
+                        </p>
+                        <div class="client-info">
+                            <h5>M. Karim Benjelloun</h5>
+                            <span>Directeur des Infrastructures - Groupe Financier, Casablanca</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="quote-text">
+                            "Pour notre complexe hôtelier à Marrakech, la sécurité des clients et la discrétion des équipements étaient primordiales. Les équipes d'Excellence Systeme ont livré une solution parfaite dans des délais très stricts."
+                        </p>
+                        <div class="client-info">
+                            <h5>Mme. Sarah Alami</h5>
+                            <span>Directrice Générale - Luxury Resort, Marrakech</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="quote-text">
+                            "Une équipe professionnelle qui maîtrise parfaitement son domaine. La détection incendie et le câblage réseau de notre site industriel à Tanger fonctionnent de manière irréprochable depuis 3 ans."
+                        </p>
+                        <div class="client-info">
+                            <h5>M. Youssef El Idrissi</h5>
+                            <span>Responsable Sécurité & HSE - Industrial Park, Tanger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client / Technology Partner Logos Marquee -->
+    <section class="client-logos">
+        <div class="container">
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="logo-item">HIKVISION</span>
+                    <span class="logo-item">DAHUA</span>
+                    <span class="logo-item">AXIS COMMUNICATIONS</span>
+                    <span class="logo-item">CISCO SYSTEMS</span>
+                    <span class="logo-item">SCHNEIDER ELECTRIC</span>
+                    <span class="logo-item">HONEYWELL</span>
+                    <span class="logo-item">BOSCH SECURITY</span>
+                    <!-- Duplicate for infinite marquee effect -->
+                    <span class="logo-item">HIKVISION</span>
+                    <span class="logo-item">DAHUA</span>
+                    <span class="logo-item">AXIS COMMUNICATIONS</span>
+                    <span class="logo-item">CISCO SYSTEMS</span>
+                    <span class="logo-item">SCHNEIDER ELECTRIC</span>
+                    <span class="logo-item">HONEYWELL</span>
+                    <span class="logo-item">BOSCH SECURITY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-text">
+                    <h3 data-i18n="ctaTitle">Un projet de sécurité ? Parlons-en.</h3>
+                    <p data-i18n="ctaSub">Notre équipe vous accompagne pour concevoir une solution adaptée à vos besoins.</p>
+                </div>
+                <div class="cta-actions">
+                    <button type="button" class="btn btn-primary" data-open-quote data-i18n="btnQuote">
+                        Demander un devis
+                    </button>
+                    <a href="#contact" class="btn btn-secondary">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+                    <div>
+                        <h3 data-i18n="contactTitle">Contactez notre équipe</h3>
+                        <p>Nos experts sont à votre disposition pour vous conseiller et réaliser une étude sur mesure.</p>
+
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h5>Téléphone</h5>
+                                    <p><a href="tel:+212522345678">+212 5 22 34 56 78</a></p>
+                                    <p><a href="tel:+212661123456">+212 6 61 12 34 56</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h5>Adresse Email</h5>
+                                    <p><a href="mailto:contact@excellencesysteme.ma">contact@excellencesysteme.ma</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h5>Siège Social</h5>
+                                    <p>Boulevard Zerktouni, Étage 4<br>Casablanca, Maroc</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h5>Horaires d'ouverture</h5>
+                                    <p>Lun - Ven: 08:30 - 18:30<br>Samedi: 09:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--charcoal-border);">
+                        <span style="font-size:0.85rem; color:var(--text-light);">Support technique d'urgence 24h/24 & 7j/7 pour nos abonnés.</span>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="contact-form-card">
+                    <h3 style="font-size:1.6rem; font-weight:800; color:var(--dark-charcoal); margin-bottom:24px;">
+                        Envoyez-nous un message
+                    </h3>
+
+                    <form id="mainContactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Nom complet *</label>
+                                <input type="text" class="form-control" placeholder="M. Mohammed Alami" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email professionnel *</label>
+                                <input type="email" class="form-control" placeholder="m.alami@entreprise.ma" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Téléphone *</label>
+                                <input type="tel" class="form-control" placeholder="+212 6 00 00 00 00" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Entreprise / Organisme</label>
+                                <input type="text" class="form-control" placeholder="Nom de votre société">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Type de solution souhaitée</label>
+                            <select class="form-control">
+                                <option value="">Sélectionnez une option</option>
+                                <option value="Vidéosurveillance">Vidéosurveillance IP & AI</option>
+                                <option value="Contrôle d'accès">Contrôle d'accès & Biométrie</option>
+                                <option value="Détection incendie">Système Détection Incendie</option>
+                                <option value="Réseaux & Infrastructure">Câblage Réseau & Fibre Optique</option>
+                                <option value="Domotique">Domotique & Smart Building</option>
+                                <option value="Sonorisation">Sonorisation Professionnelle</option>
+                                <option value="Autre">Autre projet sur mesure</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message & détails du projet *</label>
+                            <textarea class="form-control" placeholder="Décrivez succinctement votre besoin ou la localisation de votre projet..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Envoyer ma demande <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <img src="assets/logo-3d.png" alt="Excellence Systeme Logo">
+                    <p>
+                        Leader au Maroc dans la sécurité électronique, les réseaux informatiques et les solutions domotiques intelligentes. Sécurisez vos espaces avec des technologies de confiance.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="#hero">Accueil</a>
+                        <a href="#about">À propos</a>
+                        <a href="#solutions">Solutions</a>
+                        <a href="#products">Produits</a>
+                        <a href="#realizations">Réalisations</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Solutions Links -->
+                <div>
+                    <h4 class="footer-heading">Solutions</h4>
+                    <div class="footer-links">
+                        <a href="#solutions">Vidéosurveillance IP</a>
+                        <a href="#solutions">Contrôle d'accès</a>
+                        <a href="#solutions">Détection incendie</a>
+                        <a href="#solutions">Réseaux & Fibre</a>
+                        <a href="#solutions">Domotique Smart Home</a>
+                        <a href="#solutions">Sonorisation Pro</a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Contact rapide</h4>
+                    <div class="footer-links" style="gap:16px;">
+                        <p style="color:var(--text-light); font-size:0.9rem;">
+                            <i class="fa-solid fa-location-dot" style="color:#63C4C4; margin-right:8px;"></i> Blvd Zerktouni, Casablanca
+                        </p>
+                        <p style="color:var(--text-light); font-size:0.9rem;">
+                            <i class="fa-solid fa-phone" style="color:#63C4C4; margin-right:8px;"></i> +212 5 22 34 56 78
+                        </p>
+                        <p style="color:var(--text-light); font-size:0.9rem;">
+                            <i class="fa-solid fa-envelope" style="color:#63C4C4; margin-right:8px;"></i> contact@excellencesysteme.ma
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Excellence Systeme. Tous droits réservés.</p>
+                <p>Designed for Excellence in Morocco.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Request Modal -->
+    <div class="modal-overlay" id="quoteModal">
+        <div class="modal-container">
+            <button type="button" class="modal-close" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div style="margin-bottom: 24px;">
+                <div class="hero-badge" style="margin-bottom: 12px;">
+                    <i class="fa-solid fa-calculator"></i> DEMANDE DE DEVIS GRATUIT
+                </div>
+                <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--dark-charcoal);">
+                    Obtenir une estimation sur-mesure
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    Remplissez ce formulaire et notre équipe vous recontactera sous 24h ouvrées.
+                </p>
+            </div>
+
+            <form id="modalQuoteForm">
+                <div class="form-group">
+                    <label class="form-label">Nom & Prénom *</label>
+                    <input type="text" class="form-control" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-control" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Téléphone *</label>
+                        <input type="tel" class="form-control" placeholder="+212 6..." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Solution / Produit concerné</label>
+                    <select class="form-control" id="modalSolutionSelect">
+                        <option value="Vidéosurveillance">Vidéosurveillance</option>
+                        <option value="Contrôle d'accès">Contrôle d'accès</option>
+                        <option value="Détection incendie">Détection incendie</option>
+                        <option value="Réseaux & Infrastructure">Réseaux & Infrastructure</option>
+                        <option value="Domotique & Smart Home">Domotique & Smart Home</option>
+                        <option value="Sonorisation professionnelle">Sonorisation professionnelle</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Message ou précision du projet</label>
+                    <textarea class="form-control" placeholder="Indiquez le nombre de caméras, la surface ou le type de bâtiment..." style="min-height: 90px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Envoyer ma demande de devis <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
