@@ -1,8 +1,9 @@
 /* ==========================================
-   EXCELLENCE SYSTEME - MAIN INTERACTIVE JS
+   EXCELLENCE SYSTÈME - MULTI-PAGE INTERACTIVE JS
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initActiveNavLink();
     initHeaderScroll();
     initMobileNav();
     initHeroCanvas();
@@ -15,13 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguageSwitcher();
 });
 
+/* 0. Highlight Active Navigation Link based on current page URL */
+function initActiveNavLink() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else if (href && !href.startsWith('#') && !currentPath.includes(href)) {
+            link.classList.remove('active');
+        }
+    });
+}
+
 /* 1. Header Scroll Effect */
 function initHeaderScroll() {
     const header = document.querySelector('.site-header');
     if (!header) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -33,7 +49,6 @@ function initHeaderScroll() {
 function initMobileNav() {
     const toggleBtn = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
 
     if (!toggleBtn || !navMenu) return;
 
@@ -44,17 +59,6 @@ function initMobileNav() {
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
         }
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
-            }
-        });
     });
 }
 
@@ -89,7 +93,6 @@ function initHeroCanvas() {
     function draw() {
         ctx.clearRect(0, 0, width, height);
 
-        // Draw connections
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
                 const dx = particles[i].x - particles[j].x;
@@ -107,7 +110,6 @@ function initHeroCanvas() {
             }
         }
 
-        // Draw particles
         particles.forEach(p => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -163,12 +165,24 @@ function initStatsCounter() {
             startCounter();
         }
     });
+
+    // Run counter immediately if already visible
+    const statsSection = document.querySelector('.trust-bar');
+    if (statsSection) {
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top <= window.innerHeight) {
+            animated = true;
+            startCounter();
+        }
+    }
 }
 
 /* 5. Product Category Filtering */
 function initProductFilters() {
     const tabs = document.querySelectorAll('.products .tab-btn');
     const cards = document.querySelectorAll('.product-card');
+
+    if (tabs.length === 0 || cards.length === 0) return;
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -191,8 +205,10 @@ function initProductFilters() {
 
 /* 6. Portfolio Category Filtering */
 function initPortfolioFilters() {
-    const tabs = document.querySelectorAll('.realizations .tab-btn');
+    const tabs = document.querySelectorAll('.realisations .tab-btn');
     const cards = document.querySelectorAll('.portfolio-card');
+
+    if (tabs.length === 0 || cards.length === 0) return;
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -225,9 +241,7 @@ function initTestimonialCarousel() {
 
     function goToSlide(index) {
         currentIndex = index;
-        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-        const offset = isRTL ? index * 100 : -index * 100;
-        track.style.transform = `translateX(${offset}%)`;
+        track.style.transform = `translateX(-${index * 100}%)`;
 
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
@@ -279,7 +293,7 @@ function initModals() {
     }
 }
 
-/* 9. Contact Form & Modal Form Submission Feedback */
+/* 9. Contact Form & Submission Toast */
 function initContactForm() {
     const forms = document.querySelectorAll('form');
 
@@ -287,7 +301,7 @@ function initContactForm() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            showToast('Votre demande a bien été envoyée. Notre équipe vous contactera dans les plus brefs délais.');
+            showToast('Votre demande a bien été transmise à Excellence Système. Notre équipe vous recontactera sous 24h.');
 
             form.reset();
 
@@ -316,63 +330,63 @@ function showToast(message) {
     }, 4500);
 }
 
-/* 10. French / English Language Switcher */
+/* 10. Multi-Page Language Switcher (FR / EN) */
 const translations = {
     fr: {
         navHome: "Accueil",
         navAbout: "À propos",
-        navSolutions: "Solutions",
+        navActivities: "Nos activités",
         navProducts: "Produits",
         navServices: "Services",
         navRealizations: "Réalisations",
         navContact: "Contact",
         btnQuote: "Demander un devis",
-        heroTag: "EXPERT SÉCURITÉ ÉLECTRONIQUE",
-        heroTitle: "Des solutions intelligentes pour une sécurité <span class='highlight'>sans compromis</span>",
-        heroDesc: "Nous concevons, intégrons et installons des solutions de sécurité électronique et de technologie intelligente adaptées aux entreprises, institutions et particuliers.",
-        btnDiscover: "Découvrir nos solutions",
-        stat1Label: "Solutions déployées",
-        stat2Label: "Clients accompagnés",
-        stat3Label: "Années d’expertise",
-        stat4Label: "Support technique",
-        solutionsTitle: "Nos solutions",
-        solutionsSub: "Une technologie pensée pour protéger, connecter et simplifier.",
+        heroTag: "EXPERT EN COURANT FAIBLE & SÉCURITÉ ÉLECTRONIQUE",
+        heroTitle: "Votre partenaire de confiance en <span class='highlight'>courant faible et sécurité électronique</span>",
+        heroDesc: "Plus de 10 ans d'expérience dans le conseil, la fourniture, l'intégration et la maintenance de solutions de sécurité électronique, réseaux informatiques et domotique au Maroc.",
+        btnDiscover: "Découvrir nos activités",
+        stat1Label: "Projets & Solutions déployés",
+        stat2Label: "Clients accompagnés au Maroc",
+        stat3Label: "Années d’expertise éprouvée",
+        stat4Label: "Support technique & maintenance",
+        solutionsTitle: "Nos domaines d'activités",
+        solutionsSub: "Une expertise globale pour sécuriser, connecter et automatiser vos espaces.",
         aboutTitle: "Votre partenaire technologique de confiance",
-        whyTitle: "Pourquoi nous choisir ?",
-        processTitle: "Notre processus d'intervention",
+        whyTitle: "Pourquoi choisir Excellence Système ?",
+        processTitle: "Notre méthodologie d'intervention",
         realizationsTitle: "Nos réalisations",
         testimonialsTitle: "Ils nous font confiance",
-        ctaTitle: "Un projet de sécurité ? Parlons-en.",
-        ctaSub: "Notre équipe vous accompagne pour concevoir une solution adaptée à vos besoins.",
-        contactTitle: "Contactez notre équipe"
+        ctaTitle: "Un projet de sécurité ou réseau ? Parlons-en.",
+        ctaSub: "Notre équipe vous accompagne de l'étude du besoin jusqu'à l'installation et le support 24/7.",
+        contactTitle: "Contactez Excellence Système"
     },
     en: {
         navHome: "Home",
         navAbout: "About Us",
-        navSolutions: "Solutions",
+        navActivities: "Our Activities",
         navProducts: "Products",
         navServices: "Services",
         navRealizations: "Projects",
         navContact: "Contact",
         btnQuote: "Get a Quote",
-        heroTag: "ELECTRONIC SECURITY EXPERT",
-        heroTitle: "Smart solutions for security <span class='highlight'>without compromise</span>",
-        heroDesc: "We design, integrate, and install electronic security and smart technology solutions tailored for enterprises, institutions, and private clients.",
-        btnDiscover: "Discover Our Solutions",
-        stat1Label: "Deployed Solutions",
+        heroTag: "LOW CURRENT & ELECTRONIC SECURITY EXPERT",
+        heroTitle: "Your trusted partner in <span class='highlight'>low current & electronic security</span>",
+        heroDesc: "Over 10 years of expertise in consulting, supply, integration, and maintenance of electronic security, IT networking, and smart home solutions in Morocco.",
+        btnDiscover: "Explore Our Activities",
+        stat1Label: "Deployed Projects",
         stat2Label: "Satisfied Clients",
-        stat3Label: "Years of Expertise",
-        stat4Label: "Technical Support",
-        solutionsTitle: "Our Solutions",
-        solutionsSub: "Technology engineered to protect, connect, and simplify.",
+        stat3Label: "Years of Proven Expertise",
+        stat4Label: "Technical Support & Maintenance",
+        solutionsTitle: "Our Core Activities",
+        solutionsSub: "Comprehensive expertise to secure, connect, and automate your premises.",
         aboutTitle: "Your Trusted Technology Partner",
-        whyTitle: "Why Choose Us?",
-        processTitle: "Our Implementation Process",
+        whyTitle: "Why Choose Excellence Système?",
+        processTitle: "Our Implementation Methodology",
         realizationsTitle: "Our Projects",
         testimonialsTitle: "Trusted by Industry Leaders",
-        ctaTitle: "Have a security project? Let's talk.",
-        ctaSub: "Our team guides you to design a solution tailored to your exact needs.",
-        contactTitle: "Contact Our Team"
+        ctaTitle: "Have a security or IT project? Let's talk.",
+        ctaSub: "Our team supports you from initial audit to installation and 24/7 technical support.",
+        contactTitle: "Contact Excellence Système"
     }
 };
 
@@ -382,7 +396,6 @@ function initLanguageSwitcher() {
 
     function setLanguage(lang) {
         document.documentElement.setAttribute('lang', lang);
-        document.documentElement.setAttribute('dir', 'ltr');
 
         if (lang === 'en') {
             frBtns.forEach(b => b.classList.remove('active'));
@@ -392,7 +405,6 @@ function initLanguageSwitcher() {
             frBtns.forEach(b => b.classList.add('active'));
         }
 
-        // Translate text contents
         const t = translations[lang];
         if (!t) return;
 
@@ -407,4 +419,3 @@ function initLanguageSwitcher() {
     frBtns.forEach(btn => btn.addEventListener('click', () => setLanguage('fr')));
     enBtns.forEach(btn => btn.addEventListener('click', () => setLanguage('en')));
 }
-
