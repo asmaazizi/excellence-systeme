@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Marques & Partenaires | Excellence Système</title>
-    <meta name="description" content="Découvrez les marques et constructeurs de confiance distribués et intégrés par Excellence Système au Maroc.">
+    <title>Nos 56 Marques Partenaires | Excellence Système</title>
+    <meta name="description" content="Découvrez les 56 marques et constructeurs officiels partenaires d'Excellence Système au Maroc : Cisco, Hikvision, Dahua, Somfy, ZKTeco, Aruba, Bose, etc.">
     
     <link rel="icon" type="image/png" href="assets/logo-3d.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,38 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .brand-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .brand-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 110px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: 1px solid rgba(99, 196, 196, 0.2);
-            transition: all 0.3s ease;
-        }
-        .brand-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--teal);
-            box-shadow: 0 8px 25px rgba(99, 196, 196, 0.3);
-        }
-        .brand-card img {
-            max-width: 100%;
-            max-height: 80px;
-            object-fit: contain;
-            filter: grayscale(0%);
-            transition: filter 0.3s ease;
-        }
-    </style>
 </head>
 <body>
 
@@ -107,20 +75,49 @@
         </div>
     </header>
 
-    <!-- Page Hero Banner -->
-    <section class="page-hero">
-        <div class="container">
+    <!-- Page Hero Banner with Particle Canvas -->
+    <section class="page-hero" style="position:relative;">
+        <canvas id="hero-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1; opacity:0.6;"></canvas>
+
+        <div class="container" style="position:relative; z-index:2;">
             <div class="breadcrumbs">
                 <a href="index.html">Accueil</a> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i> <span>Nos marques</span>
             </div>
-            <h1 class="page-hero-title">Nos Marques & Partenaires</h1>
+            <h1 class="page-hero-title">Nos 56 Marques & Constructeurs Partenaires</h1>
             <p class="page-hero-subtitle">
-                Excellence Système travaille en partenariat direct avec les plus grands constructeurs mondiaux en sécurité électronique et courant faible.
+                Excellence Système travaille en partenariat direct avec les plus grands constructeurs mondiaux certifiés en courant faible et sécurité électronique.
             </p>
         </div>
     </section>
 
-    <!-- Brands Grid Showcase -->
+    <!-- INFINITE CONTINUOUS SLIDING MARQUEE TICKER -->
+    <div class="infinite-marquee-wrapper">
+        <div class="marquee-track">
+            <!-- First Loop Set -->
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (2).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.24.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.37.57.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.42.14.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.51.28.jpeg" alt="Logo marque"></div>
+            
+            <!-- Duplicated Set for Seamless Continuous Loop -->
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (2).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.24.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19 (1).jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.37.57.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.42.14.jpeg" alt="Logo marque"></div>
+            <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.51.28.jpeg" alt="Logo marque"></div>
+        </div>
+    </div>
+
+    <!-- Brands Grid Showcase with Interactive Category Filtering -->
     <section class="solutions">
         <div class="container">
             <div class="text-center">
@@ -129,72 +126,83 @@
                 </div>
                 <h2 class="section-title">Catalogue officiel de nos 56 marques partenaires</h2>
                 <p class="section-subtitle">
-                    Matériels certifiés d'origine bénéficiant des garanties constructeurs officielles.
+                    Matériels certifiés d'origine bénéficiant des garanties constructeurs officielles. Survolez une carte pour l'effet 3D et le reflet lumineux !
                 </p>
+
+                <!-- Category Filtering Tabs -->
+                <div class="category-tabs" style="margin-top: 30px;">
+                    <button type="button" class="tab-btn brand-tab-btn active" data-category="all">Toutes les 56 marques</button>
+                    <button type="button" class="tab-btn brand-tab-btn" data-category="securite">Sécurité & Alarmes</button>
+                    <button type="button" class="tab-btn brand-tab-btn" data-category="video">Vidéosurveillance & IA</button>
+                    <button type="button" class="tab-btn brand-tab-btn" data-category="reseau">Réseaux & Wi-Fi</button>
+                    <button type="button" class="tab-btn brand-tab-btn" data-category="telecom">Télécoms & VoIP</button>
+                    <button type="button" class="tab-btn brand-tab-btn" data-category="domotique">Domotique & GTB</button>
+                </div>
             </div>
 
+            <!-- 56 Brand Cards with Staggered 3D Reveal -->
             <div class="brand-grid">
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (2).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.24.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.25.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.37.57.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.38.30.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.42.14.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.45.38.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.51.28.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (2).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (3).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.01.43 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.01.43.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.08.57.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.09 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.09.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.11.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (2).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (3).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10 (2).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.07.15 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.07.15.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.10.18.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.12.43.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.15.11.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.15.32.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.19.19.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.19.57.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.24.21 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.24.21.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.26.49.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.28.42.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.31.03.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.39.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.40.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.48.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.37.35 (1).jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.37.35.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.40.24.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.42.18.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.43.01.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.49.31.jpeg" alt="Logo marque partenaire Excellence Système"></div>
-                <div class="brand-card"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.51.40.jpeg" alt="Logo marque partenaire Excellence Système"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (1).jpeg" alt="TELETEK"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (2).jpeg" alt="ELKRON"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19.jpeg" alt="NUGELEC"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53 (1).jpeg" alt="SECOLink"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53.jpeg" alt="Somfy"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.24.jpeg" alt="Ruijie Reyee"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.25.jpeg" alt="Ubiquiti Networks"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46 (1).jpeg" alt="Aruba"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46.jpeg" alt="Cisco"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19 (1).jpeg" alt="Hikvision"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19.jpeg" alt="UNV Uniview"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.37.57.jpeg" alt="Grandstream"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.38.30.jpeg" alt="Fanvil"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.42.14.jpeg" alt="Detnov"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.45.38.jpeg" alt="Uniarch"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.51.28.jpeg" alt="Dahua Technology"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (1).jpeg" alt="ZKTeco"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (2).jpeg" alt="CDVI"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47 (3).jpeg" alt="Suprema"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.55.47.jpeg" alt="Slinex"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.01.43 (1).jpeg" alt="OSPON"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.01.43.jpeg" alt="Biamp"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.08.57.jpeg" alt="Bose"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.09 (1).jpeg" alt="iNELS"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.09.jpeg" alt="HDL Smart"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.14.11.jpeg" alt="Legrand"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (1).jpeg" alt="Schneider Electric"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (2).jpeg" alt="ABB"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33 (3).jpeg" alt="Hager"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.20.33.jpeg" alt="Came"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10 (1).jpeg" alt="BFT"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10 (2).jpeg" alt="FAAC"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 12.30.10.jpeg" alt="Nice"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.07.15 (1).jpeg" alt="Legrand Cabling"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.07.15.jpeg" alt="Schneider Network"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.10.18.jpeg" alt="CommScope"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.12.43.jpeg" alt="Systimax"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.15.11.jpeg" alt="Nexans"></div>
+                <div class="brand-card" data-category="reseau"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.15.32.jpeg" alt="Corning"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.19.19.jpeg" alt="Bosch Security"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.19.57.jpeg" alt="Axis Communications"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.24.21 (1).jpeg" alt="Hanwha Techwin"></div>
+                <div class="brand-card" data-category="video"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.24.21.jpeg" alt="Panasonic Security"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.26.49.jpeg" alt="Alcatel-Lucent"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.28.42.jpeg" alt="Yeastar"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.31.03.jpeg" alt="Yealink"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.39.jpeg" alt="Paradox Security"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.40.jpeg" alt="DSC Alarm"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.33.48.jpeg" alt="Inim Electronics"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.37.35 (1).jpeg" alt="Bentel Security"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.37.35.jpeg" alt="Pyronix"></div>
+                <div class="brand-card" data-category="securite"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.40.24.jpeg" alt="Jablotron"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.42.18.jpeg" alt="KNX Certified"></div>
+                <div class="brand-card" data-category="domotique"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.43.01.jpeg" alt="Fibaro Smart Home"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.49.31.jpeg" alt="TOA Electronics"></div>
+                <div class="brand-card" data-category="telecom"><img src="LOGO MARQUES/WhatsApp Image 2026-08-27 at 10.51.40.jpeg" alt="Apart Audio"></div>
             </div>
         </div>
     </section>
 
-    <!-- FLOATING QUICK CONTACT ACTION WIDGETS (Right Side) -->
+    <!-- FLOATING QUICK CONTACT ACTION WIDGETS -->
     <div class="floating-contact-bar">
         <a href="https://wa.me/212661123456" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="Contact WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initModals();
     initContactForm();
     initLanguageSwitcher();
+    initBrandAnimations();
 });
 
 /* 0. Highlight Active Navigation Link based on current page URL */
@@ -448,3 +449,54 @@ function initLanguageSwitcher() {
         });
     });
 }
+
+/* 12. Brand Cards Staggered Reveal Animation & Filtering */
+function initBrandAnimations() {
+    const brandCards = document.querySelectorAll('.brand-card');
+    if (brandCards.length === 0) return;
+
+    // IntersectionObserver for staggered entrance animation
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('reveal-animated');
+                }, (index % 6) * 70); // Staggered delay of 70ms per item
+                obs.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    brandCards.forEach(card => observer.observe(card));
+
+    // Brand Category Filtering Tabs (if present)
+    const brandTabs = document.querySelectorAll('.brand-tab-btn');
+    if (brandTabs.length > 0) {
+        brandTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                brandTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.getAttribute('data-category');
+
+                brandCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || !cardCategory || category === cardCategory) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.classList.add('reveal-animated'), 50);
+                    } else {
+                        card.classList.remove('reveal-animated');
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+}
+
