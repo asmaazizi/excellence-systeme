@@ -6,19 +6,50 @@
     <title>Excellence Système | Votre partenaire de confiance en courant faible & sécurité électronique</title>
     <meta name="description" content="Excellence Système - Plus de 10 ans d'expérience au Maroc dans le conseil, la fourniture, l'intégration et la maintenance en sécurité électronique, réseaux informatiques et domotique.">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo-3d.png">
-    
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .marquee-section {
+            padding: 45px 0;
+            background: #111315;
+            border-top: 1px solid var(--charcoal-border);
+            border-bottom: 1px solid var(--charcoal-border);
+            overflow: hidden;
+        }
+        .marquee-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 10px;
+        }
+        .marquee-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .marquee-container::-webkit-scrollbar-thumb {
+            background: var(--teal);
+            border-radius: 3px;
+        }
+        .marquee-item {
+            flex: 0 0 160px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 10px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+        .marquee-item img {
+            max-width: 100%;
+            max-height: 65px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,23 +57,20 @@
     <header class="site-header">
         <div class="container">
             <nav class="navbar">
-                <!-- Company Logo -->
                 <a href="index.html" class="nav-logo">
                     <img src="assets/logo-3d.png" alt="Excellence Système Logo">
                 </a>
 
-                <!-- Navigation Links -->
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link active" data-i18n="navHome">Accueil</a></li>
                     <li><a href="about.html" class="nav-link" data-i18n="navAbout">À propos</a></li>
                     <li><a href="activites.html" class="nav-link" data-i18n="navActivities">Nos activités</a></li>
-                    <li><a href="produits.html" class="nav-link" data-i18n="navProducts">Produits</a></li>
-                    <li><a href="services.html" class="nav-link" data-i18n="navServices">Services</a></li>
-                    <li><a href="realisations.html" class="nav-link" data-i18n="navRealizations">Réalisations</a></li>
+                    <li><a href="services.html" class="nav-link" data-i18n="navServices">Nos services</a></li>
+                    <li><a href="realisations.html" class="nav-link" data-i18n="navRealizations">Nos réalisations</a></li>
+                    <li><a href="marques.html" class="nav-link">Nos marques</a></li>
                     <li><a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a></li>
                 </ul>
 
-                <!-- Header Right Actions -->
                 <div class="nav-actions">
                     <div class="lang-selector">
                         <button type="button" class="lang-btn active" data-lang="fr">FR</button>
@@ -68,7 +96,6 @@
 
         <div class="container">
             <div class="hero-grid">
-                <!-- Left Content -->
                 <div class="hero-content">
                     <div class="hero-badge">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -93,16 +120,13 @@
                     </div>
                 </div>
 
-                <!-- Right 3D Visual -->
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
                         <img src="assets/hero-3d.png" alt="Excellence Système Integrated Security Ecosystem 3D">
-                        
                         <div class="status-badge top-right">
                             <div class="status-indicator"></div>
                             <span class="status-text">+10 Ans d'Expertise au Maroc</span>
                         </div>
-
                         <div class="status-badge bottom-left">
                             <i class="fa-solid fa-network-wired" style="color: #63C4C4;"></i>
                             <span class="status-text">Support Technique 24/7</span>
@@ -113,7 +137,29 @@
         </div>
     </section>
 
-    <!-- Trust Bar (Key Statistics) -->
+    <!-- Brand Logos Marquee Section -->
+    <section class="marquee-section">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h4 style="color:var(--white); font-size:1.1rem; font-weight:700;"><i class="fa-solid fa-copyright" style="color:#63C4C4; margin-right:8px;"></i> Nos Marques & Constructeurs Partenaires</h4>
+                <a href="marques.html" style="color:#63C4C4; font-size:0.9rem; font-weight:600; text-decoration:none;">Voir les 56 marques <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="marquee-container">
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (1).jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.12.19 (2).jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.18.53 (1).jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.26.24.jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.27.46 (1).jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.34.19 (1).jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.37.57.jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.42.14.jpeg" alt="Marque partenaire"></div>
+                <div class="marquee-item"><img src="LOGO MARQUES/WhatsApp Image 2026-08-25 at 11.51.28.jpeg" alt="Marque partenaire"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
     <section class="trust-bar">
         <div class="container">
             <div class="stats-grid">
@@ -121,17 +167,14 @@
                     <div class="stat-number" data-target="300" data-prefix="+">+300</div>
                     <div class="stat-label" data-i18n="stat1Label">Projets & Solutions déployés</div>
                 </div>
-
                 <div class="stat-item">
                     <div class="stat-number" data-target="100" data-prefix="+">+100</div>
                     <div class="stat-label" data-i18n="stat2Label">Clients accompagnés au Maroc</div>
                 </div>
-
                 <div class="stat-item">
                     <div class="stat-number" data-target="10" data-prefix="+">+10</div>
                     <div class="stat-label" data-i18n="stat3Label">Années d’expertise éprouvée</div>
                 </div>
-
                 <div class="stat-item">
                     <div class="stat-number" data-target="24" data-suffix="/7">24/7</div>
                     <div class="stat-label" data-i18n="stat4Label">Support technique & maintenance</div>
@@ -145,210 +188,74 @@
         <div class="container">
             <div class="text-center">
                 <div class="section-tag">
-                    <i class="fa-solid fa-layer-group"></i> <span>NOS 11 DOMAINES D'EXPERTISE</span>
+                    <i class="fa-solid fa-layer-group"></i> <span>NOS DOMAINES D'EXPERTISE DÉDIÉS</span>
                 </div>
                 <h2 class="section-title" data-i18n="solutionsTitle">Nos activités principales</h2>
                 <p class="section-subtitle" data-i18n="solutionsSub">
-                    Une expertise globale en courant faible et sécurité pour protéger et connecter vos infrastructures.
+                    Cliquez sur une activité pour accéder à sa page dédiée avec photos et spécifications techniques réelles.
                 </p>
             </div>
 
             <div class="solutions-grid">
-                <!-- Activity 1 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-fire-flame-curved"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
                     <h3 class="solution-title">Système de détection incendie</h3>
-                    <p class="solution-desc">Détection précoce et centrale incendie conventionnelle ou adressable certifiée.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Centrales ECS/CMSI conventionnelles et adressables certifiées S.S.I.</p>
+                    <a href="activites/detection-incendie.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Activity 2 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-shield-cat"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-shield-cat"></i></div>
                     <h3 class="solution-title">Système anti-intrusion</h3>
-                    <p class="solution-desc">Protection périmétrique et alarme anti-intrusion intelligente connectée.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Protection périmétrique et alarme anti-intrusion connectée.</p>
+                    <a href="activites/anti-intrusion.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Activity 3 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-network-wired"></i></div>
                     <h3 class="solution-title">Réseau informatique</h3>
-                    <p class="solution-desc">Câblage réseau structuré, baies serveur, switching et sécurité des réseaux.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Câblage réseau structuré Cat6/Cat7, baies serveur et switching PoE.</p>
+                    <a href="activites/reseau-informatique.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Activity 4 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-video"></i></div>
                     <h3 class="solution-title">Système de vidéosurveillance</h3>
-                    <p class="solution-desc">Vidéosurveillance IP 4K, caméras AI thermiques et enregistreurs NVR réseau.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Vidéosurveillance IP 4K, caméras motorisées PTZ et enregistreurs NVR réseau.</p>
+                    <a href="activites/videosurveillance.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Activity 5 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-phone-volume"></i></div>
                     <h3 class="solution-title">Téléphonie IP</h3>
-                    <p class="solution-desc">Standard téléphonique IP-PBX, voip d'entreprise et communication unifiée.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Standard téléphonique IP-PBX, autocommutateur PABX et postes VoIP.</p>
+                    <a href="activites/telephonie-ip.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Activity 6 -->
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fa-solid fa-fingerprint"></i>
-                    </div>
+                    <div class="solution-icon"><i class="fa-solid fa-fingerprint"></i></div>
                     <h3 class="solution-title">Contrôle d'accès</h3>
-                    <p class="solution-desc">Gestion des accès par biométrie, badge RFID, obstacle physique et pointage horaire.</p>
-                    <a href="activites.html" class="solution-link">
-                        Découvrir l'activité <i class="fa-solid fa-arrow-right"></i>
+                    <p class="solution-desc">Biométrie, cartes RFID, tourniquets et pointeuses horaires de présence.</p>
+                    <a href="activites/controle-acces.html" class="solution-link">
+                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
             <div class="text-center" style="margin-top: 48px;">
                 <a href="activites.html" class="btn btn-outline">
-                    Voir les 11 activités en détail <i class="fa-solid fa-arrow-right"></i>
+                    Voir les 11 activités complètes <i class="fa-solid fa-arrow-right"></i>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview Section -->
-    <section class="why-us">
-        <div class="container">
-            <div class="text-center">
-                <div class="section-tag">
-                    <i class="fa-solid fa-gears"></i> <span>NOTRE VALEUR AJOUTÉE</span>
-                </div>
-                <h2 class="section-title">Nos 4 phases de service</h2>
-                <p class="section-subtitle">
-                    Excellence Système assure l'intégralité du cycle de vie de vos projets en courant faible.
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
-                    <h3 class="service-title">1. Conseil</h3>
-                    <p class="service-desc">Audit technique approfondi, étude de faisabilité et accompagnement dans la définition des besoins.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
-                    <h3 class="service-title">2. Fourniture</h3>
-                    <p class="service-desc">Distribution d'équipements et matériel certifiés auprès des grands constructeurs mondiaux.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h3 class="service-title">3. Intégration</h3>
-                    <p class="service-desc">Installation, câblage, paramétrage système et tests de conformité rigoriste sur le terrain.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
-                    <h3 class="service-title">4. Maintenance</h3>
-                    <p class="service-desc">Assistance technique réactive, contrat de maintenance préventive et interventions 24/7.</p>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="services.html" class="btn btn-primary">
-                    En savoir plus sur nos services <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image-column">
-                    <div class="about-image-wrapper">
-                        <img src="assets/about-team.png" alt="Ingénieurs Excellence Système en salle de contrôle">
-                    </div>
-                    <div class="experience-card">
-                        <div class="experience-num">+10</div>
-                        <div class="experience-text">Années d'Excellence<br>au Maroc</div>
-                    </div>
-                </div>
-
-                <div class="about-content">
-                    <div class="section-tag">
-                        <i class="fa-solid fa-building-user"></i> <span>À PROPOS DE NOUS</span>
-                    </div>
-                    <h2 class="section-title" data-i18n="aboutTitle">Votre partenaire technologique de confiance</h2>
-                    <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:20px;">
-                        Excellence Système est une société marocaine majeure spécialisée dans le conseil, la fourniture, l'intégration et la maintenance d'équipements de sécurité électronique, courant faible et télécoms.
-                    </p>
-                    <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:28px;">
-                        Nous intervenons à travers tout le Maroc auprès des entreprises, institutions et particuliers afin de leur offrir des solutions technologiques évolutives et durables.
-                    </p>
-
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i class="fa-solid fa-check"></i></div>
-                            <div class="benefit-content">
-                                <h4>Expertise technique certifiée</h4>
-                                <p>Des ingénieurs chevronnés maîtrisant les dernières technologies.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i class="fa-solid fa-check"></i></div>
-                            <div class="benefit-content">
-                                <h4>Solutions sur mesure & évolutives</h4>
-                                <p>Une architecture adaptée à votre bâtiment et à votre budget.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="about.html" class="btn btn-secondary">
-                        Lire notre présentation complète <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-box">
-                <div class="cta-text">
-                    <h3 data-i18n="ctaTitle">Un projet de sécurité ou réseau ? Parlons-en.</h3>
-                    <p data-i18n="ctaSub">Notre équipe vous accompagne de l'étude du besoin jusqu'à l'installation et le support 24/7.</p>
-                </div>
-                <div class="cta-actions">
-                    <button type="button" class="btn btn-primary" data-open-quote data-i18n="btnQuote">
-                        Demander un devis
-                    </button>
-                    <a href="contact.html" class="btn btn-secondary">
-                        Nous contacter
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -359,15 +266,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/logo-3d.png" alt="Excellence Système Logo">
-                    <p>
-                        Votre partenaire de confiance en courant faible et sécurité électronique au Maroc. Plus de 10 ans d'expertise à votre service.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                    <p>Votre partenaire de confiance en courant faible et sécurité électronique au Maroc. Plus de 10 ans d'expertise à votre service.</p>
                 </div>
 
                 <div>
@@ -376,9 +275,9 @@
                         <a href="index.html">Accueil</a>
                         <a href="about.html">À propos</a>
                         <a href="activites.html">Nos activités</a>
-                        <a href="produits.html">Produits</a>
-                        <a href="services.html">Services</a>
-                        <a href="realisations.html">Réalisations</a>
+                        <a href="services.html">Nos services</a>
+                        <a href="realisations.html">Nos réalisations</a>
+                        <a href="marques.html">Nos marques</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>
@@ -386,34 +285,27 @@
                 <div>
                     <h4 class="footer-heading">Nos Activités</h4>
                     <div class="footer-links">
-                        <a href="activites.html">Détection incendie</a>
-                        <a href="activites.html">Vidéosurveillance IP</a>
-                        <a href="activites.html">Contrôle d'accès</a>
-                        <a href="activites.html">Réseaux informatiques</a>
-                        <a href="activites.html">Réseaux optiques</a>
-                        <a href="activites.html">Domotique & Smart Home</a>
+                        <a href="activites/detection-incendie.html">Détection incendie</a>
+                        <a href="activites/videosurveillance.html">Vidéosurveillance IP</a>
+                        <a href="activites/controle-acces.html">Contrôle d'accès</a>
+                        <a href="activites/reseau-informatique.html">Réseaux informatiques</a>
+                        <a href="activites/reseau-optique.html">Réseaux optiques</a>
+                        <a href="activites/domotique.html">Domotique & Smart Home</a>
                     </div>
                 </div>
 
                 <div>
                     <h4 class="footer-heading">Contact rapide</h4>
                     <div class="footer-links" style="gap:16px;">
-                        <p style="color:var(--text-light); font-size:0.9rem;">
-                            <i class="fa-solid fa-location-dot" style="color:#63C4C4; margin-right:8px;"></i> Blvd Zerktouni, Casablanca
-                        </p>
-                        <p style="color:var(--text-light); font-size:0.9rem;">
-                            <i class="fa-solid fa-phone" style="color:#63C4C4; margin-right:8px;"></i> +212 5 22 34 56 78
-                        </p>
-                        <p style="color:var(--text-light); font-size:0.9rem;">
-                            <i class="fa-solid fa-envelope" style="color:#63C4C4; margin-right:8px;"></i> contact@excellencesysteme.ma
-                        </p>
+                        <p style="color:var(--text-light); font-size:0.9rem;"><i class="fa-solid fa-location-dot" style="color:#63C4C4; margin-right:8px;"></i> Blvd Zerktouni, Casablanca</p>
+                        <p style="color:var(--text-light); font-size:0.9rem;"><i class="fa-solid fa-phone" style="color:#63C4C4; margin-right:8px;"></i> +212 5 22 34 56 78</p>
+                        <p style="color:var(--text-light); font-size:0.9rem;"><i class="fa-solid fa-envelope" style="color:#63C4C4; margin-right:8px;"></i> contact@excellencesysteme.ma</p>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Excellence Système. Tous droits réservés.</p>
-                <p>Votre partenaire de confiance en courant faible & sécurité électronique.</p>
             </div>
         </div>
     </footer>
@@ -421,70 +313,19 @@
     <!-- Quote Request Modal -->
     <div class="modal-overlay" id="quoteModal">
         <div class="modal-container">
-            <button type="button" class="modal-close" aria-label="Fermer">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div style="margin-bottom: 24px;">
-                <div class="hero-badge" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-calculator"></i> DEMANDE DE DEVIS GRATUIT
-                </div>
-                <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--white);">
-                    Obtenir une estimation sur-mesure
-                </h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">
-                    Remplissez ce formulaire et notre équipe vous recontactera sous 24h ouvrées.
-                </p>
-            </div>
-
+            <button type="button" class="modal-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Obtenir une estimation sur-mesure</h3>
             <form id="modalQuoteForm">
-                <div class="form-group">
-                    <label class="form-label">Nom & Prénom *</label>
-                    <input type="text" class="form-control" placeholder="Votre nom" required>
-                </div>
-
+                <div class="form-group"><label class="form-label">Nom & Prénom *</label><input type="text" class="form-control" required></div>
                 <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">Email *</label>
-                        <input type="email" class="form-control" placeholder="votre@email.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Téléphone *</label>
-                        <input type="tel" class="form-control" placeholder="+212 6..." required>
-                    </div>
+                    <div class="form-group"><label class="form-label">Email *</label><input type="email" class="form-control" required></div>
+                    <div class="form-group"><label class="form-label">Téléphone *</label><input type="tel" class="form-control" required></div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label">Activité concernée</label>
-                    <select class="form-control" id="modalSolutionSelect">
-                        <option value="Système de détection incendie">Système de détection incendie</option>
-                        <option value="Système anti-intrusion">Système anti-intrusion</option>
-                        <option value="Réseau informatique">Réseau informatique</option>
-                        <option value="Système de vidéosurveillance">Système de vidéosurveillance</option>
-                        <option value="Téléphonie IP">Téléphonie IP</option>
-                        <option value="Contrôle d'accès">Contrôle d'accès</option>
-                        <option value="Audiovisuel">Audiovisuel</option>
-                        <option value="Domotique & Smart Home">Domotique & Smart Home</option>
-                        <option value="Motorisation portail & garage">Motorisation portail & garage</option>
-                        <option value="Réseau optique">Réseau optique</option>
-                        <option value="Télédistribution">Télédistribution</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Message ou précision du projet</label>
-                    <textarea class="form-control" placeholder="Indiquez le type de bâtiment, la ville ou vos exigences particulières..." style="min-height: 90px;"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    Envoyer ma demande de devis <i class="fa-solid fa-paper-plane"></i>
-                </button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer ma demande</button>
             </form>
         </div>
     </div>
 
-    <!-- Main JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
