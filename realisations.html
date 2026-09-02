@@ -12,10 +12,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .portfolio-img-box {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-bottom: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(99, 196, 196, 0.2);
+        }
+        .portfolio-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .portfolio-card:hover .portfolio-img-box img {
+            transform: scale(1.08);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Dropdown Menu -->
     <header class="site-header">
         <div class="container">
             <nav class="navbar">
@@ -75,15 +96,17 @@
         </div>
     </header>
 
-    <!-- Page Hero Banner -->
-    <section class="page-hero">
-        <div class="container">
+    <!-- Page Hero Banner with Particle Canvas -->
+    <section class="page-hero" style="position:relative;">
+        <canvas id="hero-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1; opacity:0.6;"></canvas>
+
+        <div class="container" style="position:relative; z-index:2;">
             <div class="breadcrumbs">
                 <a href="index.html">Accueil</a> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i> <span>Réalisations</span>
             </div>
-            <h1 class="page-hero-title">Nos Réalisations & Projets</h1>
+            <h1 class="page-hero-title">Nos Réalisations & Projets Déployés</h1>
             <p class="page-hero-subtitle">
-                Aperçu des références et projets déployés en sécurité électronique, réseaux informatiques et domotique au Maroc.
+                Aperçu visuel de nos projets concrétisés sur le terrain en sécurité électronique, réseaux informatiques et domotique au Maroc.
             </p>
         </div>
     </section>
@@ -93,11 +116,11 @@
         <div class="container">
             <div class="text-center">
                 <div class="section-tag">
-                    <i class="fa-solid fa-briefcase"></i> <span>RÉFÉRENCES PROJETS</span>
+                    <i class="fa-solid fa-briefcase"></i> <span>RÉFÉRENCES SUR LE TERRAIN</span>
                 </div>
-                <h2 class="section-title">Déploiements par secteurs</h2>
+                <h2 class="section-title">Déploiements par secteurs au Maroc</h2>
                 <p class="section-subtitle">
-                    Emplacements structurés prêts à accueillir les photos réelles de vos réalisations sur le terrain.
+                    Découvrez nos installations réelles chez nos clients entreprises, hôtels, villas et institutions.
                 </p>
             </div>
 
@@ -114,46 +137,40 @@
                 
                 <!-- Project 1: Entreprises -->
                 <div class="portfolio-card" data-category="corporate">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-building"></i>
-                        <span class="ph-title">[PHOTO PROJET - Entreprise]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/Page d'acceuil/Etix-Casablanca-1-09-Salle-informatique.jpg" alt="Projet Réseau & Datacenter Siège Social">
                     </div>
 
                     <span class="portfolio-category">Entreprises & Siège Social</span>
-                    <h3 class="portfolio-title">Intégration Réseau & Sécurité Siège</h3>
+                    <h3 class="portfolio-title">Intégration Réseau & Datacenter Siège</h3>
                     <div class="portfolio-location" style="margin-bottom: 12px;">
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Casablanca, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Déploiement complet du système de vidéosurveillance IP 4K, contrôle d'accès biométrique et câblage structuré.
+                        Déploiement complet du câblage informatique VDI Cat6A, aménagement des baies serveur et vidéosurveillance IP 4K.
                     </p>
                 </div>
 
                 <!-- Project 2: Hôtellerie -->
                 <div class="portfolio-card" data-category="hotel">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-hotel"></i>
-                        <span class="ph-title">[PHOTO PROJET - Hôtellerie]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/Télé-distribution IPTV/antenne_collective1.jpg" alt="Projet Télédistribution Hôtel Marrakech">
                     </div>
 
                     <span class="portfolio-category">Hôtellerie & Complexe Touristique</span>
-                    <h3 class="portfolio-title">Sécurité & Sonorisation Hôtel</h3>
+                    <h3 class="portfolio-title">Télédistribution & Sécurité Hôtel</h3>
                     <div class="portfolio-location" style="margin-bottom: 12px;">
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Marrakech, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Installation du système de détection incendie adressable, sonorisation d'ambiance multi-zone et Wi-Fi haut débit.
+                        Installation du réseau IPTV d'établissement, détection incendie adressable certifiée et sonorisation d'ambiance.
                     </p>
                 </div>
 
                 <!-- Project 3: Résidences -->
                 <div class="portfolio-card" data-category="residence">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-house-chimney"></i>
-                        <span class="ph-title">[PHOTO PROJET - Résidence]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/Domotique/smart-home-3317435_1920.jpg" alt="Projet Villa Intelligente Domotique Rabat">
                     </div>
 
                     <span class="portfolio-category">Domotique & Smart Home</span>
@@ -162,61 +179,55 @@
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Rabat, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Automatisation de l'éclairage, alarme anti-intrusion connectée et motorisation des accès de parking.
+                        Automatisation Smart Home éclairage/volets, alarme périmétrique connectée et motorisation des accès.
                     </p>
                 </div>
 
                 <!-- Project 4: Institutions -->
                 <div class="portfolio-card" data-category="institution">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-landmark"></i>
-                        <span class="ph-title">[PHOTO PROJET - Institution]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/GTB/batiment-intelligent-se-developpe-de-plus-en-plus.jpg" alt="Projet GTB et Réseau Optique Tanger">
                     </div>
 
                     <span class="portfolio-category">Secteur Public & Administrations</span>
-                    <h3 class="portfolio-title">Réseau Optique & Téléphonie IP</h3>
+                    <h3 class="portfolio-title">Supervision GTB & Réseau Optique</h3>
                     <div class="portfolio-location" style="margin-bottom: 12px;">
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Tanger, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Déploiement de liaisons fibre optique inter-bâtiments, standard IP-PBX et contrôle d'accès par carte RFID.
+                        Supervision technique centralisée de bâtiment, réseau fibre optique inter-bâtiments et contrôle d'accès RFID.
                     </p>
                 </div>
 
-                <!-- Project 5: Entreprises -->
+                <!-- Project 5: Entreprises / Industrie -->
                 <div class="portfolio-card" data-category="corporate">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-industry"></i>
-                        <span class="ph-title">[PHOTO PROJET - Site Industriel]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/Contrôle d'accès/Biometrie.jpg" alt="Projet Contrôle d'Accès Biométrique Agadir">
                     </div>
 
                     <span class="portfolio-category">Industrie & Logistique</span>
-                    <h3 class="portfolio-title">Protection Périmétrique & Caméras Thermiques</h3>
+                    <h3 class="portfolio-title">Biométrie & Gestion des Temps</h3>
                     <div class="portfolio-location" style="margin-bottom: 12px;">
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Agadir, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Vidéosurveillance avec analyse intelligente de franchissement de ligne et détection thermique incendie.
+                        Pointeuses biométriques de présence, tourniquets de sécurité et supervision des entrées du personnel.
                     </p>
                 </div>
 
-                <!-- Project 6: Hôtellerie -->
+                <!-- Project 6: Hôtellerie / Équipement -->
                 <div class="portfolio-card" data-category="hotel">
-                    <div class="placeholder-box placeholder-img" style="height: 230px; margin-bottom: 16px;">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span class="ph-title">[PHOTO PROJET - Restauration & Lounge]</span>
-                        <span class="ph-sub">Insérer votre photo ici</span>
+                    <div class="portfolio-img-box">
+                        <img src="Mon Site Web/Détection incendie/detection_incendie_equipement.jpg" alt="Projet Sécurité Incendie Complexe Hôtelier">
                     </div>
 
-                    <span class="portfolio-category">Audiovisuel & Télédistribution</span>
-                    <h3 class="portfolio-title">Écrans d'Affichage & Réseau Satellite</h3>
+                    <span class="portfolio-category">Sécurité Incendie Hôtelière</span>
+                    <h3 class="portfolio-title">Centrale ECS/CMSI & Détection S.S.I.</h3>
                     <div class="portfolio-location" style="margin-bottom: 12px;">
                         <i class="fa-solid fa-location-dot" style="color:#63C4C4;"></i> Casablanca, Maroc
                     </div>
                     <p style="font-size:0.88rem; color:var(--text-muted);">
-                        Distribution TV collective HD, murs d'images LCD et diffusion sonore multizone commercial.
+                        Centrale d'alarme incendie adressable de catégorie A, déclencheurs manuels et asservissement de désenfumage.
                     </p>
                 </div>
 
@@ -229,12 +240,12 @@
         <div class="container">
             <div class="cta-box">
                 <div class="cta-text">
-                    <h3>Vous souhaitez faire visiter votre chantier ou projet ?</h3>
-                    <p>Faites appel à nos techniciens pour réaliser une étude d'intégration sur mesure.</p>
+                    <h3>Vous avez un projet de sécurité ou réseau à réaliser ?</h3>
+                    <p>Nos ingénieurs et techniciens certifiés se déplacent sur votre site pour réaliser une étude gratuite sur mesure.</p>
                 </div>
                 <div class="cta-actions">
                     <button type="button" class="btn btn-primary" data-open-quote>
-                        Demander un rendez-vous
+                        Demander un rendez-vous <i class="fa-solid fa-calendar-check"></i>
                     </button>
                     <a href="contact.html" class="btn btn-secondary">
                         Nous contacter
@@ -244,7 +255,7 @@
         </div>
     </section>
 
-    <!-- FLOATING QUICK CONTACT ACTION WIDGETS (Right Side) -->
+    <!-- FLOATING QUICK CONTACT ACTION WIDGETS -->
     <div class="floating-contact-bar">
         <a href="https://wa.me/212661123456" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="Contact WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -271,12 +282,6 @@
                     <p>
                         Votre partenaire de confiance en courant faible et sécurité électronique au Maroc. Plus de 10 ans d'expertise à votre service.
                     </p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
                 </div>
 
                 <div>
@@ -285,9 +290,9 @@
                         <a href="index.html">Accueil</a>
                         <a href="about.html">À propos</a>
                         <a href="activites.html">Nos activités</a>
-                        <a href="produits.html">Produits</a>
-                        <a href="services.html">Services</a>
-                        <a href="realisations.html">Réalisations</a>
+                        <a href="services.html">Nos services</a>
+                        <a href="realisations.html">Nos réalisations</a>
+                        <a href="marques.html">Nos marques</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>
@@ -295,12 +300,12 @@
                 <div>
                     <h4 class="footer-heading">Nos Activités</h4>
                     <div class="footer-links">
-                        <a href="activites.html">Détection incendie</a>
-                        <a href="activites.html">Vidéosurveillance IP</a>
-                        <a href="activites.html">Contrôle d'accès</a>
-                        <a href="activites.html">Réseaux informatiques</a>
-                        <a href="activites.html">Réseaux optiques</a>
-                        <a href="activites.html">Domotique & Smart Home</a>
+                        <a href="activites/detection-incendie.html">Détection incendie</a>
+                        <a href="activites/videosurveillance.html">Vidéosurveillance IP</a>
+                        <a href="activites/controle-acces.html">Contrôle d'accès</a>
+                        <a href="activites/reseau-informatique.html">Réseaux informatiques</a>
+                        <a href="activites/reseau-optique.html">Réseaux optiques</a>
+                        <a href="activites/domotique.html">Domotique & Smart Home</a>
                     </div>
                 </div>
 
@@ -322,7 +327,6 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Excellence Système. Tous droits réservés.</p>
-                <p>Votre partenaire de confiance en courant faible & sécurité électronique.</p>
             </div>
         </div>
     </footer>
@@ -350,26 +354,6 @@
                         <label class="form-label">Téléphone *</label>
                         <input type="tel" class="form-control" placeholder="+212 6..." required>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Activité concernée</label>
-                    <select class="form-control" id="modalSolutionSelect">
-                        <option value="Système de détection incendie">Système de détection incendie</option>
-                        <option value="Système anti-intrusion">Système anti-intrusion</option>
-                        <option value="Réseau informatique">Réseau informatique</option>
-                        <option value="Système de vidéosurveillance">Système de vidéosurveillance</option>
-                        <option value="Téléphonie IP">Téléphonie IP</option>
-                        <option value="Contrôle d'accès">Contrôle d'accès</option>
-                        <option value="Audiovisuel">Audiovisuel</option>
-                        <option value="Domotique & Smart Home">Domotique & Smart Home</option>
-                        <option value="Motorisation portail & garage">Motorisation portail & garage</option>
-                        <option value="Réseau optique">Réseau optique</option>
-                        <option value="Télédistribution">Télédistribution</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Message ou précision du projet</label>
-                    <textarea class="form-control" placeholder="Indiquez vos besoins..." style="min-height: 90px;"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer ma demande de devis <i class="fa-solid fa-paper-plane"></i></button>
             </form>
