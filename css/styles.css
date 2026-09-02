@@ -1824,15 +1824,18 @@ textarea.form-control {
     transform: scale(1.08);
 }
 
-/* Continuous Infinite Sliding Marquee Ticker */
+/* Continuous Infinite Sliding Marquee Ticker (Multi-Row Motion) */
 .infinite-marquee-wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 16px 0;
     background: #111315;
     border-top: 1px solid var(--charcoal-border);
     border-bottom: 1px solid var(--charcoal-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .infinite-marquee-wrapper::before,
@@ -1840,7 +1843,7 @@ textarea.form-control {
     content: '';
     position: absolute;
     top: 0;
-    width: 120px;
+    width: 140px;
     height: 100%;
     z-index: 5;
     pointer-events: none;
@@ -1858,18 +1861,31 @@ textarea.form-control {
 
 .marquee-track {
     display: flex;
-    gap: 30px;
+    gap: 24px;
     width: max-content;
-    animation: marqueeContinuousSlide 35s linear infinite;
+}
+
+.marquee-track.track-left {
+    animation: marqueeSlideLeft 40s linear infinite;
+}
+
+.marquee-track.track-right {
+    animation: marqueeSlideRight 42s linear infinite;
 }
 
 .infinite-marquee-wrapper:hover .marquee-track {
     animation-play-state: paused;
 }
 
-@keyframes marqueeContinuousSlide {
+@keyframes marqueeSlideLeft {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+@keyframes marqueeSlideRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
 
 
