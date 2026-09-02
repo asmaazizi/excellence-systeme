@@ -166,7 +166,6 @@ function initStatsCounter() {
         }
     });
 
-    // Run counter immediately if already visible
     const statsSection = document.querySelector('.trust-bar');
     if (statsSection) {
         const rect = statsSection.getBoundingClientRect();
@@ -241,7 +240,9 @@ function initTestimonialCarousel() {
 
     function goToSlide(index) {
         currentIndex = index;
-        track.style.transform = `translateX(-${index * 100}%)`;
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        const offset = isRTL ? index * 100 : -index * 100;
+        track.style.transform = `translateX(${offset}%)`;
 
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
@@ -330,7 +331,7 @@ function showToast(message) {
     }, 4500);
 }
 
-/* 10. Multi-Page Language Switcher (FR / EN) */
+/* 10. Multi-Page Language Switcher (FR / EN / AR) */
 const translations = {
     fr: {
         navHome: "Accueil",
@@ -387,23 +388,47 @@ const translations = {
         ctaTitle: "Have a security or IT project? Let's talk.",
         ctaSub: "Our team supports you from initial audit to installation and 24/7 technical support.",
         contactTitle: "Contact Excellence Système"
+    },
+    ar: {
+        navHome: "الرئيسية",
+        navAbout: "عن الشركة",
+        navActivities: "أنشطتنا",
+        navProducts: "المنتجات",
+        navServices: "الخدمات",
+        navRealizations: "مشاريعنا",
+        navContact: "اتصل بنا",
+        btnQuote: "طلب استشارة / سعر",
+        heroTag: "خبير التيار المنخفض والأمان الإلكتروني",
+        heroTitle: "شريكك الموثوق في <span class='highlight'>التيار المنخفض والأمان الإلكتروني</span>",
+        heroDesc: "أكثر من 10 سنوات من الخبرة في الاستشارة والتوريد والتكامل والصيانة لحلول الأمان الإلكتروني والشبكات والمنزل الذكي بالمغرب.",
+        btnDiscover: "اكتشف أنشطتنا",
+        stat1Label: "مشروع ونظام تم تشغيله",
+        stat2Label: "عميل مرافَق بالمغرب",
+        stat3Label: "سنوات من الخبرة المثبتة",
+        stat4Label: "دعم فني وصيانة متواصلة",
+        solutionsTitle: "مجالات أنشطتنا",
+        solutionsSub: "خبرة شاملة لتأمين وربط وأتمتة مساحاتكم.",
+        aboutTitle: "شريكك التكنولوجي الموثوق",
+        whyTitle: "لماذا تختار التميز للنظم؟",
+        processTitle: "مراحل تنفيذ مشروعك",
+        realizationsTitle: "أبرز إنجازاتنا",
+        testimonialsTitle: "ثقة علمائنا وشركائنا",
+        ctaTitle: "هل لديك مشروع أمان أو شبكات؟ لنناقشه معاً.",
+        ctaSub: "فريقنا المتخصص في خدمتك لتصميم وتطبيق أفضل الحلول المناسبة لاحتياجاتك.",
+        contactTitle: "تواصل مع فريقنا"
     }
 };
 
 function initLanguageSwitcher() {
-    const frBtns = document.querySelectorAll('[data-lang="fr"]');
-    const enBtns = document.querySelectorAll('[data-lang="en"]');
+    const langBtns = document.querySelectorAll('.lang-btn');
 
     function setLanguage(lang) {
         document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
-        if (lang === 'en') {
-            frBtns.forEach(b => b.classList.remove('active'));
-            enBtns.forEach(b => b.classList.add('active'));
-        } else {
-            enBtns.forEach(b => b.classList.remove('active'));
-            frBtns.forEach(b => b.classList.add('active'));
-        }
+        langBtns.forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+        });
 
         const t = translations[lang];
         if (!t) return;
@@ -416,6 +441,10 @@ function initLanguageSwitcher() {
         });
     }
 
-    frBtns.forEach(btn => btn.addEventListener('click', () => setLanguage('fr')));
-    enBtns.forEach(btn => btn.addEventListener('click', () => setLanguage('en')));
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
 }
