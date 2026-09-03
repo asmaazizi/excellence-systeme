@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initLanguageSwitcher();
     initBrandAnimations();
+    initAboutSlider();
 });
 
 /* 0. Highlight Active Navigation Link based on current page URL */
@@ -499,4 +500,68 @@ function initBrandAnimations() {
         });
     }
 }
+
+/* 13. Interactive About Image Slider */
+function initAboutSlider() {
+    const sliders = document.querySelectorAll('.about-slider-wrapper');
+    if (!sliders.length) return;
+
+    sliders.forEach(wrapper => {
+        const slides = wrapper.querySelectorAll('.about-slide');
+        const dots = wrapper.querySelectorAll('.dot');
+        const prevBtn = wrapper.querySelector('.about-slider-btn.prev');
+        const nextBtn = wrapper.querySelector('.about-slider-btn.next');
+        let currentIndex = 0;
+        let timer = null;
+
+        if (!slides.length) return;
+
+        function goToSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+
+            currentIndex = (index + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+            if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+        }
+
+        function startAutoPlay() {
+            stopAutoPlay();
+            timer = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 4500);
+        }
+
+        function stopAutoPlay() {
+            if (timer) clearInterval(timer);
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+                startAutoPlay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+                startAutoPlay();
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                goToSlide(idx);
+                startAutoPlay();
+            });
+        });
+
+        wrapper.addEventListener('mouseenter', stopAutoPlay);
+        wrapper.addEventListener('mouseleave', startAutoPlay);
+
+        startAutoPlay();
+    });
+}
+
 
