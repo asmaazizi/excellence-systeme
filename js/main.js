@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonialCarousel();
     initModals();
     initContactForm();
+    initFaqAccordion();
     initLanguageSwitcher();
     initBrandAnimations();
     initAboutSlider();
@@ -769,6 +770,41 @@ function initActivityBrandsTilt() {
         });
     });
 }
+
+/* 16. FAQ Accordion Toggle */
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+
+        if (header) {
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    const ic = i.querySelector('.faq-icon i');
+                    if (ic) {
+                        ic.className = 'fa-solid fa-plus';
+                    }
+                });
+
+                // Toggle clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                    const icon = item.querySelector('.faq-icon i');
+                    if (icon) {
+                        icon.className = 'fa-solid fa-minus';
+                    }
+                }
+            });
+        }
+    });
+}
+
 
 
 
