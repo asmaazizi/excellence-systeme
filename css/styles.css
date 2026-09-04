@@ -1247,36 +1247,43 @@ button, input, select, textarea {
 
 .form-label {
     display: block;
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
 }
 
 .form-control {
     width: 100%;
-    padding: 12px 16px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-light);
-    background: #16181A;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(12, 16, 22, 0.6);
     color: var(--white);
-    transition: var(--transition-fast);
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .form-control:focus {
     border-color: var(--primary-turquoise);
-    background: #1D2024;
-    box-shadow: 0 0 0 3px var(--primary-light);
+    background: rgba(18, 24, 34, 0.85);
+    box-shadow: 0 0 12px rgba(99, 196, 196, 0.2);
+    outline: none;
 }
 
 .form-control select option {
-    background-color: #1A1D20;
+    background-color: #161A22;
     color: #FFFFFF;
 }
 
 textarea.form-control {
     resize: vertical;
-    min-height: 120px;
+    min-height: 90px;
 }
 
 /* Footer */
@@ -2980,46 +2987,46 @@ textarea.form-control {
     transform: translateX(4px);
 }
 
-/* Glass Form Card */
+/* Glass Form Card - Refined & Lightweight */
 .contact-form-glass-card {
-    background: linear-gradient(145deg, rgba(26, 29, 32, 0.9) 0%, rgba(19, 21, 24, 0.95) 100%);
-    border: 1px solid rgba(99, 196, 196, 0.3);
-    border-radius: 24px;
-    padding: 44px 38px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(18px);
+    background: rgba(20, 24, 30, 0.75);
+    border: 1px solid rgba(99, 196, 196, 0.2);
+    border-radius: 20px;
+    padding: 32px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
 }
 
 @media (max-width: 600px) {
     .contact-form-glass-card {
-        padding: 28px 20px;
+        padding: 24px 18px;
     }
 }
 
 .form-header-box {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
 .form-sub-tag {
     color: var(--primary-turquoise);
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.78rem;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 8px;
-    display: block;
+    margin-bottom: 6px;
+    display: inline-block;
 }
 
 .form-header-box h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 1.55rem;
+    font-weight: 700;
     color: var(--white);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .form-header-box p {
-    font-size: 0.92rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
 }
 
 .btn-block-animated {
