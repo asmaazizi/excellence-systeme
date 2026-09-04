@@ -12,44 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .marquee-section {
-            padding: 45px 0;
-            background: #111315;
-            border-top: 1px solid var(--charcoal-border);
-            border-bottom: 1px solid var(--charcoal-border);
-            overflow: hidden;
-        }
-        .marquee-container {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding-bottom: 10px;
-        }
-        .marquee-container::-webkit-scrollbar {
-            height: 6px;
-        }
-        .marquee-container::-webkit-scrollbar-thumb {
-            background: var(--teal);
-            border-radius: 3px;
-        }
-        .marquee-item {
-            flex: 0 0 160px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 10px;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-        }
-        .marquee-item img {
-            max-width: 100%;
-            max-height: 65px;
-            object-fit: contain;
-        }
-    </style>
 </head>
 <body>
 
@@ -122,46 +84,143 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <!-- IMMERSIVE DYNAMIC HERO SECTION WITH INTERACTIVE SLIDER -->
+    <section class="hero-slider-wrapper" id="hero">
         <canvas id="hero-canvas"></canvas>
 
-        <div class="container">
+        <!-- Slide Background Images Carousel -->
+        <div class="hero-slider-bg">
+            <div class="hero-slide-bg active" style="background-image: linear-gradient(to right, rgba(22,24,26,0.92) 30%, rgba(22,24,26,0.65)), url('assets/img/about-building-automation.jpg');"></div>
+            <div class="hero-slide-bg" style="background-image: linear-gradient(to right, rgba(22,24,26,0.92) 30%, rgba(22,24,26,0.65)), url('assets/img/reseau-datacenter.jpg');"></div>
+            <div class="hero-slide-bg" style="background-image: linear-gradient(to right, rgba(22,24,26,0.92) 30%, rgba(22,24,26,0.65)), url('assets/img/incendie-hero.jpg');"></div>
+            <div class="hero-slide-bg" style="background-image: linear-gradient(to right, rgba(22,24,26,0.92) 30%, rgba(22,24,26,0.65)), url('assets/img/video-hero.jpg');"></div>
+        </div>
+
+        <div class="container hero-container-content">
             <div class="hero-grid">
+                <!-- Dynamic Content Container -->
                 <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span data-i18n="heroTag">EXPERT EN COURANT FAIBLE & SÉCURITÉ ÉLECTRONIQUE</span>
+                    
+                    <!-- Slide Content 1 -->
+                    <div class="hero-slide-content active" data-slide="0">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-house-signal"></i>
+                            <span>DOMOTIQUE & GTB / INELS PARTNER</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Supervision & Bâtiments <span class="highlight">Intelligents (GTB)</span>
+                        </h1>
+                        <p class="hero-description">
+                            Pilotez l'ensemble de vos équipements techniques (éclairage, climatisation, sécurité) avec des interfaces de contrôle sur-mesure pour villas et bâtiments tertiaires.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="activites/domotique.html" class="btn btn-primary">
+                                Découvrir la domotique <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-open-quote>
+                                Demander une étude
+                            </button>
+                        </div>
                     </div>
 
-                    <h1 class="hero-title" data-i18n="heroTitle">
-                        Votre partenaire de confiance en <span class="highlight">courant faible et sécurité électronique</span>
-                    </h1>
-
-                    <p class="hero-description" data-i18n="heroDesc">
-                        Plus de 10 ans d'expérience dans le conseil, la fourniture, l'intégration et la maintenance de solutions de sécurité électronique, réseaux informatiques et domotique au Maroc.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="activites.html" class="btn btn-primary" data-i18n="btnDiscover">
-                            Découvrir nos activités <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <button type="button" class="btn btn-secondary" data-open-quote data-i18n="btnQuote">
-                            Demander un devis
-                        </button>
+                    <!-- Slide Content 2 -->
+                    <div class="hero-slide-content" data-slide="1">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>INFRASTRUCTURES RÉSEAU & DATACENTER</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Réseaux Informatiques <span class="highlight">Très Haut Débit</span>
+                        </h1>
+                        <p class="hero-description">
+                            Conception de baies de brassage, câblage structuré Cat6/Cat7, switching PoE certifié et liaison fibre optique haute performance.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="activites/reseau-informatique.html" class="btn btn-primary">
+                                Nos solutions réseau <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-open-quote>
+                                Demander un devis
+                            </button>
+                        </div>
                     </div>
+
+                    <!-- Slide Content 3 -->
+                    <div class="hero-slide-content" data-slide="2">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <span>SÉCURITÉ D'ETAT & INCENDIE S.S.I.</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Détection Incendie & <span class="highlight">Alarme Anti-Intrusion</span>
+                        </h1>
+                        <p class="hero-description">
+                            Systèmes ECS/CMSI conventionnels et adressables certifiés S.S.I. pour la protection intégrale des établissements recevant du public (ERP).
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="activites/detection-incendie.html" class="btn btn-primary">
+                                Détection Incendie <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-open-quote>
+                                Devis express
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide Content 4 -->
+                    <div class="hero-slide-content" data-slide="3">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-video"></i>
+                            <span>VIDÉOSURVEILLANCE IP & CONTRÔLE D'ACCÈS</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Vidéosurveillance 4K & <span class="highlight">Biométrie Intelligente</span>
+                        </h1>
+                        <p class="hero-description">
+                            Caméras motorisées PTZ, reconnaissance de plaques d'immatriculation (LPR), tourniquets et gestion d'accès centralisée.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="activites/videosurveillance.html" class="btn btn-primary">
+                                Voir nos caméras <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-open-quote>
+                                Demander un devis
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls & Progress -->
+                    <div class="hero-slider-controls">
+                        <button type="button" class="hero-slider-arrow prev-slide" aria-label="Slide précédente"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div class="hero-slider-dots">
+                            <span class="hero-dot active" data-slide-target="0"></span>
+                            <span class="hero-dot" data-slide-target="1"></span>
+                            <span class="hero-dot" data-slide-target="2"></span>
+                            <span class="hero-dot" data-slide-target="3"></span>
+                        </div>
+                        <button type="button" class="hero-slider-arrow next-slide" aria-label="Slide suivante"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
                 </div>
 
+                <!-- Right Side Visual Glass Showcase Card -->
                 <div class="hero-visual">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/hero-3d.png" alt="Excellence Système Integrated Security Ecosystem 3D">
-                        <div class="status-badge top-right">
+                    <div class="hero-image-wrapper glass-card-3d">
+                        <img src="assets/hero-3d.png" alt="Excellence Système Integrated Security Ecosystem 3D" id="hero-main-visual">
+                        
+                        <div class="status-badge top-right glow-badge">
                             <div class="status-indicator"></div>
                             <span class="status-text">+10 Ans d'Expertise au Maroc</span>
                         </div>
-                        <div class="status-badge bottom-left">
-                            <i class="fa-solid fa-network-wired" style="color: #63C4C4;"></i>
+                        
+                        <div class="status-badge bottom-left glow-badge">
+                            <i class="fa-solid fa-shield-halved" style="color: #63C4C4; font-size:1.1rem;"></i>
                             <span class="status-text">Support Technique 24/7</span>
+                        </div>
+
+                        <div class="hero-floating-specs">
+                            <div class="spec-item"><i class="fa-solid fa-check-double" style="color:#63C4C4;"></i> Matériel 100% Certifié</div>
+                            <div class="spec-item"><i class="fa-solid fa-bolt" style="color:#63C4C4;"></i> Intervention Rapide</div>
                         </div>
                     </div>
                 </div>
@@ -169,12 +228,12 @@
         </div>
     </section>
 
-    <!-- Brand Logos Marquee Section -->
-    <section class="marquee-section" style="padding: 30px 0 10px;">
+    <!-- BRAND LOGOS MARQUEE SECTION WITH GLASS MASKING -->
+    <section class="marquee-section">
         <div class="container">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-                <h4 style="color:var(--white); font-size:1.1rem; font-weight:700;"><i class="fa-solid fa-copyright" style="color:#63C4C4; margin-right:8px;"></i> Nos Marques & Constructeurs Partenaires</h4>
-                <a href="marques.html" style="color:#63C4C4; font-size:0.9rem; font-weight:600; text-decoration:none;">Voir les 56 marques <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="marquee-header">
+                <h4><i class="fa-solid fa-certificate" style="color:#63C4C4; margin-right:10px;"></i> Nos Marques & Constructeurs Partenaires</h4>
+                <a href="marques.html" class="marquee-link">Voir les 56 marques officielles <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -231,32 +290,167 @@
         </div>
     </section>
 
-    <!-- Trust Bar -->
+    <!-- STATS / TRUST BAR WITH ANIMATED NEON ICONS -->
     <section class="trust-bar">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item glass-stat">
+                    <div class="stat-icon-wrapper"><i class="fa-solid fa-diagram-project"></i></div>
                     <div class="stat-number" data-target="300" data-prefix="+">+300</div>
-                    <div class="stat-label" data-i18n="stat1Label">Projets & Solutions déployés</div>
+                    <div class="stat-label">Projets & Solutions Déployés</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item glass-stat">
+                    <div class="stat-icon-wrapper"><i class="fa-solid fa-users"></i></div>
                     <div class="stat-number" data-target="100" data-prefix="+">+100</div>
-                    <div class="stat-label" data-i18n="stat2Label">Clients accompagnés au Maroc</div>
+                    <div class="stat-label">Clients Accompagnés au Maroc</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item glass-stat">
+                    <div class="stat-icon-wrapper"><i class="fa-solid fa-award"></i></div>
                     <div class="stat-number" data-target="10" data-prefix="+">+10</div>
-                    <div class="stat-label" data-i18n="stat3Label">Années d’expertise éprouvée</div>
+                    <div class="stat-label">Années d'Expertise Éprouvée</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item glass-stat">
+                    <div class="stat-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
                     <div class="stat-number" data-target="24" data-suffix="/7">24/7</div>
-                    <div class="stat-label" data-i18n="stat4Label">Support technique & maintenance</div>
+                    <div class="stat-label">Support Technique & Maintenance</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Company Overview Section with Animated Real Photo Slider -->
-    <section class="about" style="background:#131517; border-bottom:1px solid var(--charcoal-border);">
+    <!-- CORE VISUAL ACTIVITIES SHOWCASE SECTION (GLASSMORPHISM CARDS WITH REAL PROJECT PHOTOS) -->
+    <section class="solutions" id="activites-section">
+        <div class="container">
+            <div class="text-center section-header-center">
+                <div class="section-tag">
+                    <i class="fa-solid fa-layer-group"></i> <span>NOS DOMAINES D'EXPERTISE ÉPROUVÉS</span>
+                </div>
+                <h2 class="section-title">Nos Activités Principales</h2>
+                <p class="section-subtitle">
+                    Découvrez nos domaines d'intervention clés. Cliquez sur une carte pour consulter nos équipements et réalisations réelles.
+                </p>
+            </div>
+
+            <div class="activities-visual-grid">
+                <!-- Activity Card 1: Détection Incendie -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/incendie-hero.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-fire-flame-curved"></i> Certifié S.S.I.</div>
+                        <h3 class="card-title">Détection Incendie</h3>
+                        <p class="card-description">Centrales ECS/CMSI conventionnelles et adressables conformes aux normes ERP.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Détecteurs Optiques</span>
+                            <span><i class="fa-solid fa-check"></i> Sirènes Flash</span>
+                        </div>
+                        <a href="activites/detection-incendie.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 2: Vidéosurveillance IP -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/video-hero.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-video"></i> Ultra HD 4K</div>
+                        <h3 class="card-title">Vidéosurveillance IP</h3>
+                        <p class="card-description">Caméras motorisées PTZ, reconnaissance de plaques LPR et serveurs NVR réseau.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Vision Nocturne IR</span>
+                            <span><i class="fa-solid fa-check"></i> Détection IA</span>
+                        </div>
+                        <a href="activites/videosurveillance.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 3: Réseau Informatique -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/reseau-datacenter.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-network-wired"></i> Cat6 / Cat7 / Fibre</div>
+                        <h3 class="card-title">Réseau Informatique</h3>
+                        <p class="card-description">Câblage structuré, baies de brassage serveur et switching PoE administrable.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Baies Datacenter</span>
+                            <span><i class="fa-solid fa-check"></i> Wi-Fi 6 Professionnel</span>
+                        </div>
+                        <a href="activites/reseau-informatique.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 4: Contrôle d'accès -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/access-biometric.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-fingerprint"></i> Biométrie & RFID</div>
+                        <h3 class="card-title">Contrôle d'Accès</h3>
+                        <p class="card-description">Reconnaissance faciale, tourniquets piétons, badges RFID et pointeuses horaires.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Pointage Horaire</span>
+                            <span><i class="fa-solid fa-check"></i> Serrures Réseau</span>
+                        </div>
+                        <a href="activites/controle-acces.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 5: Domotique & GTB -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/domotique-smart.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-house-signal"></i> iNELS & KNX</div>
+                        <h3 class="card-title">Domotique & GTB</h3>
+                        <p class="card-description">Gestion technique des bâtiments, automatisation d'éclairage et régulation HVAC.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Écran Tactile Wall</span>
+                            <span><i class="fa-solid fa-check"></i> App Smartphone</span>
+                        </div>
+                        <a href="activites/domotique.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 6: Anti-intrusion -->
+                <div class="activity-glass-card">
+                    <div class="card-bg-image" style="background-image: url('assets/img/anti-intrusion-ajax.jpg');"></div>
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge"><i class="fa-solid fa-shield-cat"></i> Alarme Connectée</div>
+                        <h3 class="card-title">Système Anti-intrusion</h3>
+                        <p class="card-description">Protection périmétrique extérieure, détecteurs double technologie et sirènes.</p>
+                        <div class="card-features">
+                            <span><i class="fa-solid fa-check"></i> Barrières Infrarouges</span>
+                            <span><i class="fa-solid fa-check"></i> Télésurveillance 24h</span>
+                        </div>
+                        <a href="activites/anti-intrusion.html" class="card-action-btn">
+                            En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="activites.html" class="btn btn-outline btn-lg">
+                    Explorer nos 11 activités intégrales <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT COMPANY OVERVIEW WITH SLIDER OF REAL CLIENT PHOTOS -->
+    <section class="about" style="background:#131517; border-top:1px solid var(--charcoal-border); border-bottom:1px solid var(--charcoal-border);">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-column">
@@ -344,79 +538,92 @@
         </div>
     </section>
 
-    <!-- Core Activities Summary Section -->
-    <section class="solutions">
+    <!-- NEW SECTION: SECTORS OF INTERVENTION & REAL PROJECT SHOWCASE -->
+    <section class="sectors-section" style="padding: 90px 0; background: var(--bg-dark);">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center section-header-center">
                 <div class="section-tag">
-                    <i class="fa-solid fa-layer-group"></i> <span>NOS DOMAINES D'EXPERTISE DÉDIÉS</span>
+                    <i class="fa-solid fa-city"></i> <span>CHAMPS D'INTERVENTION</span>
                 </div>
-                <h2 class="section-title" data-i18n="solutionsTitle">Nos activités principales</h2>
-                <p class="section-subtitle" data-i18n="solutionsSub">
-                    Cliquez sur une activité pour accéder à sa page dédiée avec photos et spécifications techniques réelles.
+                <h2 class="section-title">Solutions Adaptées à Votre Secteur</h2>
+                <p class="section-subtitle">
+                    Nos ingénieurs déploient des architectures de sécurité électronique et courant faible taillées pour vos besoins métiers.
                 </p>
             </div>
 
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                    <h3 class="solution-title">Système de détection incendie</h3>
-                    <p class="solution-desc">Centrales ECS/CMSI conventionnelles et adressables certifiées S.S.I.</p>
-                    <a href="activites/detection-incendie.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+            <div class="sectors-grid">
+                <!-- Sector 1: Hôtellerie -->
+                <div class="sector-card">
+                    <div class="sector-image">
+                        <img src="assets/img/services-hotel.jpg" alt="Hôtellerie & Resorts Excellence Système">
+                        <div class="sector-tag-badge"><i class="fa-solid fa-hotel"></i> Hôtellerie & Resorts</div>
+                    </div>
+                    <div class="sector-info">
+                        <h3>Hôtellerie & Resorts</h3>
+                        <p>Télédistribution IP TV, Wi-Fi très haute densité, serrures à cartes magnétiques & sonorisation d'ambiance.</p>
+                        <a href="services.html#hotellerie" class="sector-link">Découvrir l'offre <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
                 </div>
 
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-shield-cat"></i></div>
-                    <h3 class="solution-title">Système anti-intrusion</h3>
-                    <p class="solution-desc">Protection périmétrique et alarme anti-intrusion connectée.</p>
-                    <a href="activites/anti-intrusion.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <!-- Sector 2: Villas & Résidences -->
+                <div class="sector-card">
+                    <div class="sector-image">
+                        <img src="assets/img/services-villa.jpg" alt="Villas & Résidences de Luxe Excellence Système">
+                        <div class="sector-tag-badge"><i class="fa-solid fa-house-chimney"></i> Villas de Luxe</div>
+                    </div>
+                    <div class="sector-info">
+                        <h3>Villas & Résidences</h3>
+                        <p>Domotique iNELS, alarme anti-intrusion connectée, visiophonie et contrôle d'accès sur smartphone.</p>
+                        <a href="services.html#villas" class="sector-link">Découvrir l'offre <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
                 </div>
 
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3 class="solution-title">Réseau informatique</h3>
-                    <p class="solution-desc">Câblage réseau structuré Cat6/Cat7, baies serveur et switching PoE.</p>
-                    <a href="activites/reseau-informatique.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <!-- Sector 3: Sièges & Entreprises -->
+                <div class="sector-card">
+                    <div class="sector-image">
+                        <img src="assets/img/services-entreprises.jpg" alt="Entreprises & Bureaux Excellence Système">
+                        <div class="sector-tag-badge"><i class="fa-solid fa-building"></i> Entreprises & Bureaux</div>
+                    </div>
+                    <div class="sector-info">
+                        <h3>Entreprises & Tertiaire</h3>
+                        <p>Baies informatiques Datacenter, vidéoprotection 4K, pointage horaire biométrique & téléphonie IP.</p>
+                        <a href="services.html#entreprises" class="sector-link">Découvrir l'offre <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
                 </div>
 
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-video"></i></div>
-                    <h3 class="solution-title">Système de vidéosurveillance</h3>
-                    <p class="solution-desc">Vidéosurveillance IP 4K, caméras motorisées PTZ et enregistreurs NVR réseau.</p>
-                    <a href="activites/videosurveillance.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                    <h3 class="solution-title">Téléphonie IP</h3>
-                    <p class="solution-desc">Standard téléphonique IP-PBX, autocommutateur PABX et postes VoIP.</p>
-                    <a href="activites/telephonie-ip.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h3 class="solution-title">Contrôle d'accès</h3>
-                    <p class="solution-desc">Biométrie, cartes RFID, tourniquets et pointeuses horaires de présence.</p>
-                    <a href="activites/controle-acces.html" class="solution-link">
-                        En savoir plus <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <!-- Sector 4: Industrie & Administrations -->
+                <div class="sector-card">
+                    <div class="sector-image">
+                        <img src="assets/img/about-smart-city.jpg" alt="Industrie & Administrations Excellence Système">
+                        <div class="sector-tag-badge"><i class="fa-solid fa-landmark"></i> Industrie & Publique</div>
+                    </div>
+                    <div class="sector-info">
+                        <h3>Industrie & Administrations</h3>
+                        <p>Détection incendie SSI globale, supervision GTB/GTC, tourniquets de sécurité et motorisation de barrières.</p>
+                        <a href="services.html#administrations" class="sector-link">Découvrir l'offre <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="text-center" style="margin-top: 48px;">
-                <a href="activites.html" class="btn btn-outline">
-                    Voir les 11 activités complètes <i class="fa-solid fa-arrow-right"></i>
-                </a>
+    <!-- HIGH IMPACT CALL TO ACTION (CTA) BANNER -->
+    <section class="cta-banner-section">
+        <div class="container">
+            <div class="cta-glass-box">
+                <div class="cta-content">
+                    <span class="cta-subtag"><i class="fa-solid fa-sparkles"></i> PROJET COURANT FAIBLE OU SÉCURITÉ ?</span>
+                    <h2>Prêt à sécuriser & automatiser vos infrastructures ?</h2>
+                    <p>Nos experts réalisent une étude de vos plans et un devis sur-mesure sous 24h.</p>
+                </div>
+                <div class="cta-actions">
+                    <button type="button" class="btn btn-primary btn-lg" data-open-quote>
+                        <i class="fa-solid fa-paper-plane"></i> Demander un Devis Gratuit
+                    </button>
+                    <a href="tel:+212522345678" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-phone"></i> +212 5 22 34 56 78
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -439,7 +646,7 @@
         </button>
     </div>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">

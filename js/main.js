@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileNav();
     initHeroCanvas();
+    initHeroSlider();
     initStatsCounter();
     initProductFilters();
     initPortfolioFilters();
@@ -563,5 +564,72 @@ function initAboutSlider() {
         startAutoPlay();
     });
 }
+
+/* 14. Interactive Hero Slider */
+function initHeroSlider() {
+    const heroWrapper = document.querySelector('.hero-slider-wrapper');
+    if (!heroWrapper) return;
+
+    const bgSlides = heroWrapper.querySelectorAll('.hero-slide-bg');
+    const contentSlides = heroWrapper.querySelectorAll('.hero-slide-content');
+    const dots = heroWrapper.querySelectorAll('.hero-dot');
+    const prevBtn = heroWrapper.querySelector('.prev-slide');
+    const nextBtn = heroWrapper.querySelector('.next-slide');
+
+    if (!bgSlides.length || !contentSlides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+
+    function goToSlide(index) {
+        bgSlides.forEach(s => s.classList.remove('active'));
+        contentSlides.forEach(c => c.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+
+        currentIndex = (index + bgSlides.length) % bgSlides.length;
+
+        bgSlides[currentIndex].classList.add('active');
+        contentSlides[currentIndex].classList.add('active');
+        if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        timer = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 5000);
+    }
+
+    function stopAutoPlay() {
+        if (timer) clearInterval(timer);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            startAutoPlay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            startAutoPlay();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            goToSlide(idx);
+            startAutoPlay();
+        });
+    });
+
+    heroWrapper.addEventListener('mouseenter', stopAutoPlay);
+    heroWrapper.addEventListener('mouseleave', startAutoPlay);
+
+    startAutoPlay();
+}
+
 
 
