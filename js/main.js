@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguageSwitcher();
     initBrandAnimations();
     initAboutSlider();
+    initActivityBrandsTilt();
 });
 
 /* 0. Highlight Active Navigation Link based on current page URL */
@@ -630,6 +631,29 @@ function initHeroSlider() {
 
     startAutoPlay();
 }
+
+/* 15. Activity Brands 3D Tilt Effect */
+function initActivityBrandsTilt() {
+    const cards = document.querySelectorAll('.activity-brand-card, .home-brand-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            const tiltX = (y / rect.height) * -12;
+            const tiltY = (x / rect.width) * 12;
+
+            card.style.transform = `perspective(500px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale(1.04)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
 
 
 
