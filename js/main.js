@@ -642,10 +642,10 @@ function initActivityBrandsTilt() {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
-            const tiltX = (y / rect.height) * -12;
-            const tiltY = (x / rect.width) * 12;
+            const tiltX = (y / (rect.height / 2)) * -14;
+            const tiltY = (x / (rect.width / 2)) * 14;
 
-            card.style.transform = `perspective(500px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale(1.04)`;
+            card.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-12px) scale(1.08)`;
         });
 
         card.addEventListener('mouseleave', () => {
@@ -653,6 +653,7 @@ function initActivityBrandsTilt() {
         });
     });
 }
+
 
 
 
